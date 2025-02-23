@@ -1,0 +1,75 @@
+@if (isLoading()) {
+<p>Loading movie details...</p>
+} @else if (movie()) {
+<div class="movie-details">
+  <div class="movie-details-section">
+    <h1>{{ movie()?.Title || "No Title Available" }}</h1>
+    <img
+      [src]="movie()?.Poster || 'https://via.placeholder.com/300'"
+      [alt]="movie()?.Title"
+    />
+
+    @if (movie()?.Title) {
+    <button class="trailer-button" (click)="openTrailer(movie()?.Title!)">
+      Watch Trailer
+    </button>
+    }
+
+    <div class="movie-info">
+      <table>
+        <tr class="ratings">
+          <th>Ratings:</th>
+          <td>
+            @for (rating of movie()?.Ratings; track rating) {
+            <span>{{ rating.Source }}: {{ rating.Value }} &nbsp;</span>
+            }
+          </td>
+        </tr>
+        <tr>
+          <th>Release Date:</th>
+          <td>{{ movie()?.Released || "N/A" }}</td>
+        </tr>
+        <tr>
+          <th>Country:</th>
+          <td>{{ movie()?.Country || "N/A" }}</td>
+        </tr>
+        <tr>
+          <th>Director:</th>
+          <td>{{ movie()?.Director || "N/A" }}</td>
+        </tr>
+        <tr>
+          <th>Genre:</th>
+          <td>{{ movie()?.Genre || "N/A" }}</td>
+        </tr>
+        <tr>
+          <th>Runtime:</th>
+          <td>{{ movie()?.Runtime || "N/A" }}</td>
+        </tr>
+        <tr>
+          <th>Actors:</th>
+          <td>{{ movie()?.Actors || "N/A" }}</td>
+        </tr>
+        <tr>
+          <th>Box Office:</th>
+          <td>{{ movie()?.BoxOffice || "N/A" }}</td>
+        </tr>
+        <tr>
+          <th>Awards:</th>
+          <td>{{ movie()?.Awards || "N/A" }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="description">
+      <h3>Description</h3>
+      <p>{{ movie()?.Plot || "No Description Available" }}</p>
+    </div>
+  </div>
+</div>
+} @else {
+<p>Error loading movie details.</p>
+}
+
+<button class="favorites-btn" (click)="addToFavorites()">
+  Add to Favorites
+</button>

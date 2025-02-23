@@ -1,0 +1,30 @@
+<div class="auth-container">
+  <h2>Login</h2>
+
+  @if (errorMessage()) {
+  <p class="error">{{ errorMessage() }}</p>
+  }
+
+  <form [formGroup]="form">
+    <label>Email</label>
+    <input type="email" formControlName="email" />
+    @if (form.controls.email.invalid && form.controls.email.touched) {
+    <p class="error">Invalid email format</p>
+    }
+
+    <label>Password</label>
+    <input type="password" formControlName="password" />
+    @if (form.controls.password.invalid && form.controls.password.touched) {
+    <p class="error">Password must be at least 8 characters long</p>
+    }
+
+    <button type="button" [disabled]="!isValid()" (click)="login()">
+      Login
+    </button>
+
+    <div class="auth-links">
+      <a href="#">Forgot password?</a>
+      <a routerLink="/register">No account? Register here!</a>
+    </div>
+  </form>
+</div>

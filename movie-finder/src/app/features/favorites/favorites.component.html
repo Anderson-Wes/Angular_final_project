@@ -1,0 +1,15 @@
+<div class="favorites-container">
+  <h2>My Favorite Movies</h2>
+
+  @if (favorites().length === 0) {
+  <p>No favorite movies added yet.</p>
+  } @else {
+  <div class="movies-list">
+    @for (movie of favorites(); track movie) {
+    <div class="favorite-item">
+      <app-movie-card [movie]="movie"></app-movie-card>
+    </div>
+    }
+  </div>
+  }
+</div>

@@ -1,0 +1,49 @@
+<div class="auth-container">
+  <h2>Register</h2>
+
+  <form [formGroup]="form">
+    <label>Full Name</label>
+    <input type="text" formControlName="fullName" />
+    @if (form.controls.fullName.invalid && form.controls.fullName.touched) {
+    <p class="error">Name must contain only letters</p>
+    }
+
+    <label>Email</label>
+    <input type="email" formControlName="email" />
+    @if (form.controls.email.invalid && form.controls.email.touched) {
+    <p class="error">Invalid email format</p>
+    }
+
+    <label>Password</label>
+    <input type="password" formControlName="password" />
+    @if (form.controls.password.invalid && form.controls.password.touched) {
+    <p class="error">
+      Password must be at least 8 characters, include a digit and an uppercase
+      letter
+    </p>
+    }
+
+    <label>Confirm Password</label>
+    <input type="password" formControlName="confirmPassword" />
+    @if (form.controls.confirmPassword.invalid &&
+    form.controls.confirmPassword.touched) {
+    <p class="error">Passwords must match</p>
+    }
+
+    <label>
+      <input type="checkbox" formControlName="terms" />
+      I agree with the site rules
+    </label>
+    @if (form.controls.terms.invalid && form.controls.terms.touched) {
+    <p class="error">You must accept the terms</p>
+    }
+
+    <button type="button" [disabled]="!isValid()" (click)="register()">
+      Register
+    </button>
+
+    <div class="auth-links">
+      <a routerLink="/login">Already have an account? Log in!</a>
+    </div>
+  </form>
+</div>
