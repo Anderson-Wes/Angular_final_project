@@ -54,4 +54,28 @@ export class MovieService {
         })
       );
   }
+
+  getReviews(movieId: string): Observable<any[]> {
+    return this.http.get<any[]>(
+      `http://localhost:4000/reviews?movieId=${movieId}`
+    );
+  }
+
+  addReview(
+    userId: number,
+    nickname: string,
+    movieId: string,
+    reviewText: string
+  ): Observable<any> {
+    return this.http.post<any>('http://localhost:4000/reviews', {
+      userId,
+      nickname,
+      movieId,
+      reviewText,
+    });
+  }
+
+  deleteReview(reviewId: number): Observable<void> {
+    return this.http.delete<void>(`http://localhost:4000/reviews/${reviewId}`);
+  }
 }

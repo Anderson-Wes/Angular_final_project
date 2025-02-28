@@ -73,3 +73,37 @@
 <button class="favorites-btn" (click)="toggleFavorite()">
   @if (isFavorite()) { Remove from Favorites } @else { Add to Favorites }
 </button>
+
+<h3>Reviews</h3>
+
+@if (authService.getCurrentUser()) {
+<form [formGroup]="reviewForm" (ngSubmit)="submitReview()">
+  <label for="review">Your Review:</label>
+  <textarea formControlName="reviewText"></textarea>
+  @if (reviewForm.controls.reviewText.invalid &&
+  reviewForm.controls.reviewText.touched) {
+  <p class="error">Review must be at least 5 characters long.</p>
+  }
+  <button type="submit" [disabled]="reviewForm.invalid">Submit Review</button>
+</form>
+} @else {
+<p>Please log in to leave a review.</p>
+} @if (reviews().length === 0) {
+<p>No reviews yet.</p>
+} @else {
+<div class="reviews-list">
+  @for (review of reviews(); track review) {
+  <div class="review-item">
+    <p>
+      <strong>{{ review.nickname }}</strong
+      >: {{ review.reviewText }}
+    </p>
+    @if (authService.getCurrentUser()?.id === review.userId) {
+    <button class="delete-btn" (click)="deleteReview(review.id, review.userId)">
+      Delete
+    </button>
+    }
+  </div>
+  }
+</div>
+}

@@ -37,3 +37,11 @@ export interface IUser {
   email: string;
   password: string;
 }
+
+export interface IReview {
+  id?: number;
+  userId: number;
+  nickname: string;
+  imdbID: string;
+  text: string;
+}
