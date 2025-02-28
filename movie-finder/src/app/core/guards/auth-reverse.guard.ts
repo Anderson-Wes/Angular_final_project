@@ -12,9 +12,8 @@ export class AuthReverseGuard implements CanActivate {
   canActivate(): boolean {
     const user = this.authService.getCurrentUser();
     if (user) {
-      this.router.navigate(['/']); // Если уже авторизован → редирект на главную
-      return false;
+      this.router.navigate(['/']);
     }
-    return true; // Если не авторизован → доступ разрешен
+    return true;
   }
 }

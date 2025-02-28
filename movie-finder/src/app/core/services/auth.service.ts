@@ -83,7 +83,3 @@ export class AuthService {
     return this.apiUrl;
   }
 }
-
-// Registration (register()) checks the email before creating a user.
-// Authentication (login()) saves the user and redirects.
-// Logout (logout()) removes the user from localStorage.

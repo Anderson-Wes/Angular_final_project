@@ -47,9 +47,9 @@ export class MovieService {
       .pipe(
         switchMap((favorites) => {
           if (favorites.length === 0) {
-            return of(); // Если фильм не найден в избранном, ничего не делаем
+            return of();
           }
-          const favoriteId = favorites[0].id; // Получаем `id` фильма в избранном
+          const favoriteId = favorites[0].id;
           return this.http.delete<void>(`${this.favoritesUrl}/${favoriteId}`);
         })
       );

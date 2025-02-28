@@ -12,9 +12,9 @@ export class AuthGuard implements CanActivate {
   canActivate(): boolean {
     const user = this.authService.getCurrentUser();
     if (!user) {
-      this.router.navigate(['/login']); // Если не авторизован → редирект на Login
+      this.router.navigate(['/login']);
       return false;
     }
-    return true; // Если авторизован → доступ разрешен
+    return true;
   }
 }

@@ -23,7 +23,7 @@ export const routes: Routes = [
       import('./features/auth/login/login.component').then(
         (m) => m.LoginComponent
       ),
-    canActivate: [AuthReverseGuard], // 🔒 Запрещаем вход для авторизованных пользователей
+    canActivate: [AuthReverseGuard],
   },
   {
     path: 'register',
@@ -31,7 +31,7 @@ export const routes: Routes = [
       import('./features/auth/register/register.component').then(
         (m) => m.RegisterComponent
       ),
-    canActivate: [AuthReverseGuard], // 🔒 Запрещаем вход для авторизованных пользователей
+    canActivate: [AuthReverseGuard],
   },
   {
     path: 'profile',
@@ -39,7 +39,7 @@ export const routes: Routes = [
       import('./features/profile/profile.component').then(
         (m) => m.ProfileComponent
       ),
-    canActivate: [AuthGuard], // 🔒 Доступ только для авторизованных пользователей
+    canActivate: [AuthGuard],
   },
   {
     path: 'favorites',
@@ -47,7 +47,7 @@ export const routes: Routes = [
       import('./features/favorites/favorites.component').then(
         (m) => m.FavoritesComponent
       ),
-    canActivate: [AuthGuard], // 🔒 Доступ только для авторизованных пользователей
+    canActivate: [AuthGuard],
   },
   {
     path: '**',

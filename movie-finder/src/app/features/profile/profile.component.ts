@@ -25,7 +25,7 @@ export class ProfileComponent {
 
   user = signal<IUser | null>(null);
   isEditing = signal<boolean>(false);
-  errorMessage = signal<string | null>(null); // ✅ Добавлен сигнал для отображения ошибок
+  errorMessage = signal<string | null>(null);
 
   form = this.fb.group({
     fullName: [
