@@ -14,20 +14,14 @@
     },
     {
       "id": "14e4",
-      "fullName": "david",
-      "email": "bosikov@gmail.com",
-      "password": "q1w2Link"
-    },
-    {
-      "id": "014f",
-      "fullName": "david",
+      "fullName": "bosikov",
       "email": "bosikos@gmail.com",
-      "password": "q1w2Link"
+      "password": "йцук"
     },
     {
       "id": "3e5a",
       "fullName": "david",
-      "email": "david@gmail.com",
+      "email": "asasdasfasga",
       "password": "q1w2Link"
     },
     {
@@ -625,6 +619,48 @@
       "Website": "N/A",
       "Response": "True",
       "userId": "905e"
+    },
+    {
+      "id": "8e9b",
+      "Title": "Harry Potter and the Deathly Hallows: Part 2",
+      "Year": "2011",
+      "Rated": "PG-13",
+      "Released": "15 Jul 2011",
+      "Runtime": "130 min",
+      "Genre": "Adventure, Family, Fantasy",
+      "Director": "David Yates",
+      "Writer": "Steve Kloves, J.K. Rowling",
+      "Actors": "Daniel Radcliffe, Emma Watson, Rupert Grint",
+      "Plot": "As the battle between the forces of good and evil in the wizarding world escalates, Harry Potter draws ever closer to his final confrontation with Voldemort.",
+      "Language": "English, Latin",
+      "Country": "United Kingdom, United States",
+      "Awards": "Nominated for 3 Oscars. 49 wins & 95 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.1/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "96%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "85/100"
+        }
+      ],
+      "Metascore": "85",
+      "imdbRating": "8.1",
+      "imdbVotes": "984,804",
+      "imdbID": "tt1201607",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$381,447,587",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "14e4"
     }
   ]
 }

@@ -8,6 +8,9 @@
     @for (movie of favorites(); track movie) {
     <div class="favorite-item">
       <app-movie-card [movie]="movie"></app-movie-card>
+      <button class="remove-btn" (click)="removeFromFavorites(movie.imdbID)">
+        Remove from Favorites
+      </button>
     </div>
     }
   </div>

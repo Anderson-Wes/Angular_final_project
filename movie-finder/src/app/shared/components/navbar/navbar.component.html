@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <a routerLink="/">Home</a>
+  @if (authService.getCurrentUser()) {
+  <a routerLink="/favorites">Favorites</a>
+  <a routerLink="/profile">Profile</a>
+  <button class="logout-btn" (click)="logout()">Logout</button>
+  } @else {
+  <a routerLink="/login">Login</a>
+  <a routerLink="/register">Register</a>
+  }
+</nav>

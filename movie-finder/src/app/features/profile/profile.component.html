@@ -1,0 +1,46 @@
+<div class="profile-container">
+  <h2>My Profile</h2>
+
+  @if (errorMessage()) {
+  <p class="error">{{ errorMessage() }}</p>
+  }
+
+  <form [formGroup]="form">
+    <label>Full Name</label>
+    <input type="text" formControlName="fullName" [readonly]="!isEditing()" />
+
+    <label>Email</label>
+    <input type="email" formControlName="email" [readonly]="!isEditing()" />
+
+    @if (isEditing()) {
+    <button type="button" (click)="saveChanges()">Save Changes</button>
+    <button type="button" (click)="toggleEdit()">Cancel</button>
+    } @else {
+    <button type="button" (click)="toggleEdit()">Edit Profile</button>
+    }
+  </form>
+
+  <h3>Change Password</h3>
+  <form [formGroup]="form">
+    <label>Current Password</label>
+    <input type="password" formControlName="currentPassword" />
+
+    <label>New Password</label>
+    <input type="password" formControlName="newPassword" />
+    @if (form.controls.newPassword.invalid && form.controls.newPassword.touched)
+    {
+    <p class="error">
+      Password must be at least 8 characters long, include a digit and an
+      uppercase letter.
+    </p>
+    }
+
+    <label>Confirm New Password</label>
+    <input type="password" formControlName="confirmPassword" />
+    @if (form.value.newPassword !== form.value.confirmPassword) {
+    <p class="error">Passwords must match</p>
+    }
+
+    <button type="button" (click)="changePassword()">Change Password</button>
+  </form>
+</div>

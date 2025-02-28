@@ -74,6 +74,14 @@ export class AuthService {
     localStorage.removeItem('currentUser');
     this.router.navigate(['/login']);
   }
+
+  updateUser(updatedUser: IUser): void {
+    this.currentUser.set(updatedUser);
+    localStorage.setItem('currentUser', JSON.stringify(updatedUser));
+  }
+  getApiUrl(): string {
+    return this.apiUrl;
+  }
 }
 
 // Registration (register()) checks the email before creating a user.

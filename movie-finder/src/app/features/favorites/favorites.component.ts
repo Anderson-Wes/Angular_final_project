@@ -35,4 +35,14 @@ export class FavoritesComponent {
       }
     });
   }
+  removeFromFavorites(movieId: string) {
+    const user = this.authService.getCurrentUser();
+    if (user) {
+      this.movieService.removeFromFavorites(user.id!, movieId).subscribe(() => {
+        this.favorites.set(
+          this.favorites().filter((movie) => movie.imdbID !== movieId)
+        );
+      });
+    }
+  }
 }

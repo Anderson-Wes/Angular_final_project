@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, switchMap, of } from 'rxjs';
 import { IMovie, IMovieDetails } from '../../shared/interfaces/interfaces';
 
 @Injectable({
@@ -42,8 +42,16 @@ export class MovieService {
   }
 
   removeFromFavorites(userId: number, movieId: string): Observable<void> {
-    return this.http.delete<void>(
-      `${this.favoritesUrl}?userId=${userId}&imdbID=${movieId}`
-    );
+    return this.http
+      .get<any[]>(`${this.favoritesUrl}?userId=${userId}&imdbID=${movieId}`)
+      .pipe(
+        switchMap((favorites) => {
+          if (favorites.length === 0) {
+            return of(); // Если фильм не найден в избранном, ничего не делаем
+          }
+          const favoriteId = favorites[0].id; // Получаем `id` фильма в избранном
+          return this.http.delete<void>(`${this.favoritesUrl}/${favoriteId}`);
+        })
+      );
   }
 }

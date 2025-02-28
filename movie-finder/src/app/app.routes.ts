@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { AuthGuard } from './core/guards/auth.guard';
+import { AuthReverseGuard } from './core/guards/auth-reverse.guard';
 
 export const routes: Routes = [
   {
@@ -21,6 +23,7 @@ export const routes: Routes = [
       import('./features/auth/login/login.component').then(
         (m) => m.LoginComponent
       ),
+    canActivate: [AuthReverseGuard], // 🔒 Запрещаем вход для авторизованных пользователей
   },
   {
     path: 'register',
@@ -28,6 +31,15 @@ export const routes: Routes = [
       import('./features/auth/register/register.component').then(
         (m) => m.RegisterComponent
       ),
+    canActivate: [AuthReverseGuard], // 🔒 Запрещаем вход для авторизованных пользователей
+  },
+  {
+    path: 'profile',
+    loadComponent: () =>
+      import('./features/profile/profile.component').then(
+        (m) => m.ProfileComponent
+      ),
+    canActivate: [AuthGuard], // 🔒 Доступ только для авторизованных пользователей
   },
   {
     path: 'favorites',
@@ -35,6 +47,7 @@ export const routes: Routes = [
       import('./features/favorites/favorites.component').then(
         (m) => m.FavoritesComponent
       ),
+    canActivate: [AuthGuard], // 🔒 Доступ только для авторизованных пользователей
   },
   {
     path: '**',

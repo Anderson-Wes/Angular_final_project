@@ -70,6 +70,6 @@
 <p>Error loading movie details.</p>
 }
 
-<button class="favorites-btn" (click)="addToFavorites()">
-  Add to Favorites
+<button class="favorites-btn" (click)="toggleFavorite()">
+  @if (isFavorite()) { Remove from Favorites } @else { Add to Favorites }
 </button>
