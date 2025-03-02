@@ -78,4 +78,13 @@ export class MovieService {
   deleteReview(reviewId: number): Observable<void> {
     return this.http.delete<void>(`http://localhost:4000/reviews/${reviewId}`);
   }
+
+  searchMoviesByCategory(
+    category: string,
+    page: number = 1
+  ): Observable<{ Search: IMovie[]; totalResults: string }> {
+    return this.http.get<{ Search: IMovie[]; totalResults: string }>(
+      `${this.apiUrl}?s=${category}&page=${page}&apikey=${this.apiKey}`
+    );
+  }
 }

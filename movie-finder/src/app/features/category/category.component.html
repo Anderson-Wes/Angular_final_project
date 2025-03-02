@@ -1,0 +1,21 @@
+<h2>{{ category() | titlecase }} Movies</h2>
+
+@if (movies().length === 0) {
+<p>No movies found in this category.</p>
+} @else {
+<div class="movies-list">
+  @for (movie of movies(); track movie) {
+  <app-movie-card [movie]="movie"></app-movie-card>
+  }
+</div>
+
+<div class="pagination">
+  <button (click)="changePage(-1)" [disabled]="currentPage() === 1">
+    Previous
+  </button>
+  <span>Page {{ currentPage() }} of {{ getTotalPages() }}</span>
+  <button (click)="changePage(1)" [disabled]="currentPage() >= getTotalPages()">
+    Next
+  </button>
+</div>
+}

@@ -11,6 +11,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'category/:type',
+    loadComponent: () =>
+      import('./features/category/category.component').then(
+        (m) => m.CategoryComponent
+      ),
+  },
+  {
     path: 'movie/:id',
     loadComponent: () =>
       import('./features/movie-details/movie-details.component').then(
