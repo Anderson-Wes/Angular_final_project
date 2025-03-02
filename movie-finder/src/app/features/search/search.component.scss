@@ -1,0 +1,51 @@
+@import "../../../assets/css/reset.css";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background-color: #11212e;
+  max-width: 1200px;
+  width: 100%;
+  padding: 100px 60px;
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    h1 {
+      font-size: 42px;
+
+      color: #f1f1f1;
+    }
+
+    .search-box {
+      display: flex;
+      width: 1080px;
+      justify-content: space-between;
+
+      input {
+        max-width: 900px;
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        background-color: #414d58;
+        padding: 25px 40px;
+        color: #f1f1f1;
+      }
+    }
+  }
+
+  .movies-list {
+    display: flex;
+    width: 1080px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
