@@ -3,11 +3,14 @@
 h2 {
   font-size: 30px;
   color: #2e859e;
+  text-align: center;
+  padding: 40px 0;
 }
 
 .movies-list {
   display: flex;
-  width: 1080px;
+  width: 1200px;
+  padding: 0 60px;
   flex-wrap: wrap;
   gap: 20px;
 }

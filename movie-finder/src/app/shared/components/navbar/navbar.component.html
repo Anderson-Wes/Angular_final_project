@@ -1,23 +1,28 @@
-<!-- <nav class="navbar">
-  <a routerLink="/">Home</a>
-  @if (authService.getCurrentUser()) {
-  <a routerLink="/favorites">Favorites</a>
-  <a routerLink="/profile">Profile</a>
-  <button class="logout-btn" (click)="logout()">Logout</button>
-  } @else {
-  <a routerLink="/login">Login</a>
-  <a routerLink="/register">Register</a>
-  }
-</nav> -->
 
 <nav class="navbar">
-  <a routerLink="/" routerLinkActive="active">Home</a>
-  @if (authService.getCurrentUser()) {
-  <a routerLink="/favorites" routerLinkActive="active">Favorites</a>
-  <a routerLink="/profile" routerLinkActive="active">Profile</a>
-  <button class="logout-btn" (click)="logout()">Logout</button>
-  } @else {
-  <a routerLink="/login" routerLinkActive="active">Login</a>
-  <a routerLink="/register" routerLinkActive="active">Register</a>
-  }
+  <div>
+    <a routerLink="/" class="logo">
+      <img src="../../../../assets/img/logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <div>
+    @if (authService.getCurrentUser()) {
+      <a routerLink="/favorites">Favorites</a>
+
+      <div class="profile-menu" (mouseenter)="toggleDropdown()" (mouseleave)="toggleDropdown()">
+        <a class="profile-link">Profile ▼</a>
+
+        @if (isDropdownOpen()) {
+          <div class="dropdown">
+            <a routerLink="/profile">Settings</a>
+            <a (click)="logout()">Logout</a>
+          </div>
+        }
+      </div>
+    } @else {
+      <a routerLink="/login">Login</a>
+      <a routerLink="/register">Register</a>
+    }
+  </div>
 </nav>

@@ -1,21 +1,57 @@
 @import "../../../../assets/css/reset.css";
 
+
 .navbar {
   display: flex;
-  width: 1200px;
-  justify-content: center;
-  padding: 20px 60px;
-  gap: 20px;
-  background-color: #11212e;
-  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #1f1f1f;
+  padding: 10px 60px;
+
+    .logo img {
+      cursor: pointer;
+    }
+
+
+
 
   a {
     color: #848b8e;
-    font-size: 18px;
-    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
 
     &:hover {
-      color: #ff5c5c;
+
+        color: #ff5c5c;
+    }
+  }
+
+  .profile-menu {
+    position: relative;
+    cursor: pointer;
+
+    .dropdown {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      background: #333;
+
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      width: 120px;
+
+      a {
+        padding: 10px;
+        text-align: center;
+
+        &:hover {
+          background: #ffcc00;
+          color: black;
+        }
+      }
     }
   }
 }

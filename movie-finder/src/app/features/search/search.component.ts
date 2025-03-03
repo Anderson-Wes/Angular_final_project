@@ -1,11 +1,11 @@
-import { Component, signal, computed, effect } from '@angular/core';
+import { Component, signal, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { MovieService } from '../../core/services/movie.service';
 import { IMovie } from '../../shared/interfaces/interfaces';
 import { MovieCardComponent } from '../../shared/movie-card/movie-card.component';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
-import { query } from '@angular/animations';
+
 
 @Component({
   standalone: true,

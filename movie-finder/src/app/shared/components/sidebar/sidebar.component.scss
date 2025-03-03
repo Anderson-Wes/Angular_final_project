@@ -1,11 +1,26 @@
 @import "../../../../assets/css/reset.css";
 
-a {
-  color: #848b8e;
-  font-size: 18px;
-  transition: 0.3s ease-in-out;
 
-  &:hover {
-    color: #ff5c5c;
+.sidebar {
+  padding: 20px 0; 
+  background-color: #222D33;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    a {
+      color: #848b8e;
+      font-size: 16px;
+      transition: 0.3s ease-in-out;
+    
+      &:hover {
+        color: #ff5c5c;
+      }
+    }
   }
+
 }
+
