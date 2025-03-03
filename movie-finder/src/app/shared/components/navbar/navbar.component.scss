@@ -5,51 +5,60 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   background: #1f1f1f;
-  padding: 10px 60px;
+  padding: 0 60px;
 
     .logo img {
+      height: 40px;
       cursor: pointer;
     }
 
+    .menu {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
 
-
+    .profile-menu {
+      padding: 10px 0;
+    }
 
   a {
     color: #848b8e;
     text-decoration: none;
-    margin: 0 10px;
     transition: 0.3s;
+    padding: 10px 0;
 
     &:hover {
-
         color: #ff5c5c;
     }
   }
 
+  
   .profile-menu {
     position: relative;
     cursor: pointer;
 
     .dropdown {
       position: absolute;
-      top: 25px;
-      left: 0;
-      background: #333;
-
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      padding: 10px 20px;
+      background: #1f1f1f;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      width: 120px;
+
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 
       a {
         padding: 10px;
         text-align: center;
 
         &:hover {
-          background: #ffcc00;
-          color: black;
+          background: #ff5c5c;
+          color: #222D33;
         }
       }
     }
