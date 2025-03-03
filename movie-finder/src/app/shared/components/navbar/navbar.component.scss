@@ -44,17 +44,15 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, 20%);
-      padding: 10px 20px;
       background: #1f1f1f;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 
       a {
-        padding: 10px;
         text-align: center;
+        padding: 15px 20px;
 
         &:hover {
           background: #ff5c5c;
