@@ -5,9 +5,372 @@
       "fullName": "John Doeaasdasgfsdas",
       "email": "john@examdpadslase.com",
       "password": "q1w2Link"
+    },
+    {
+      "id": "1d8e",
+      "fullName": "dasd",
+      "email": "dasdsa@asdas",
+      "password": "Q1W2E3R4"
     }
   ],
-  "favorites": [],
+  "favorites": [
+    {
+      "id": "4d42",
+      "Title": "The Lego Movie",
+      "Year": "2014",
+      "Rated": "PG",
+      "Released": "07 Feb 2014",
+      "Runtime": "100 min",
+      "Genre": "Animation, Action, Adventure",
+      "Director": "Phil Lord, Christopher Miller",
+      "Writer": "Phil Lord, Christopher Miller, Dan Hageman",
+      "Actors": "Chris Pratt, Will Ferrell, Elizabeth Banks",
+      "Plot": "An ordinary LEGO construction worker, thought to be the prophesied as \"special\", is recruited to join a quest to stop an evil tyrant from gluing the LEGO universe into eternal stasis.",
+      "Language": "English, Turkish",
+      "Country": "United States, Denmark, Australia, Norway",
+      "Awards": "Nominated for 1 Oscar. 72 wins & 67 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTg4MDk1ODExN15BMl5BanBnXkFtZTgwNzIyNjg3MDE@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.7/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "96%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "83/100"
+        }
+      ],
+      "Metascore": "83",
+      "imdbRating": "7.7",
+      "imdbVotes": "398,133",
+      "imdbID": "tt1490017",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$257,966,122",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "dabf",
+      "Title": "Scary Movie",
+      "Year": "2000",
+      "Rated": "R",
+      "Released": "07 Jul 2000",
+      "Runtime": "88 min",
+      "Genre": "Comedy",
+      "Director": "Keenen Ivory Wayans",
+      "Writer": "Shawn Wayans, Marlon Wayans, Buddy Johnson",
+      "Actors": "Anna Faris, Jon Abrahams, Marlon Wayans",
+      "Plot": "A year after disposing of the body of a man they accidentally killed, a group of dumb teenagers are stalked by a bumbling serial killer.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "7 wins & 6 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZGRmMGRhOWMtOTk3Ni00OTRjLTkyYTAtYzA1M2IzMGE3NGRkXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.3/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "51%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "48/100"
+        }
+      ],
+      "Metascore": "48",
+      "imdbRating": "6.3",
+      "imdbVotes": "299,646",
+      "imdbID": "tt0175142",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$157,019,771",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "a2ca",
+      "Title": "A Series of Unfortunate Events",
+      "Year": "2017–2019",
+      "Rated": "TV-PG",
+      "Released": "13 Jan 2017",
+      "Runtime": "2 min",
+      "Genre": "Adventure, Comedy, Drama",
+      "Director": "N/A",
+      "Writer": "N/A",
+      "Actors": "Neil Patrick Harris, Patrick Warburton, Malina Pauli Weissman",
+      "Plot": "After the loss of their parents in a mysterious fire, the three Baudelaire children face trials and tribulations attempting to uncover dark family secrets.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "Nominated for 6 Primetime Emmys. 19 wins & 46 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTUxMjIzODI0NV5BMl5BanBnXkFtZTgwMDk3OTI2MDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.7/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "7.7",
+      "imdbVotes": "68,577",
+      "imdbID": "tt4834206",
+      "Type": "series",
+      "totalSeasons": "3",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "79cc",
+      "Title": "Chasing Trane: The John Coltrane Documentary",
+      "Year": "2016",
+      "Rated": "Not Rated",
+      "Released": "14 Apr 2017",
+      "Runtime": "99 min",
+      "Genre": "Documentary, Biography, History",
+      "Director": "John Scheinfeld",
+      "Writer": "John Scheinfeld",
+      "Actors": "Denzel Washington, Reggie Workman, Ravi Coltrane",
+      "Plot": "An exploration of the global power and impact of the music of John Coltrane where the passions, experiences and forces that shaped his life and revolutionary sounds are revealed.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "1 nomination",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMzRhMDVhZDgtYTcwZi00MDBlLWJkZjItNjY2YmEyYmVhZDk3XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.3/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "74%"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "7.3",
+      "imdbVotes": "2,523",
+      "imdbID": "tt4283892",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$406,284",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "e41d",
+      "Title": "Documentary Now!",
+      "Year": "2015–",
+      "Rated": "TV-14",
+      "Released": "20 Aug 2015",
+      "Runtime": "23 min",
+      "Genre": "Comedy",
+      "Director": "N/A",
+      "Writer": "Fred Armisen, Bill Hader, Seth Meyers",
+      "Actors": "Helen Mirren, Fred Armisen, Bill Hader",
+      "Plot": "\"Documentary Now!\" parodies the current obsession with documentaries. Season one features six different stories and stylistic approaches paying tribute to the doc format.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "Nominated for 6 Primetime Emmys. 3 wins & 21 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ2Mjg3NTA5NV5BMl5BanBnXkFtZTgwNzExNTU1NjE@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.1/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "8.1",
+      "imdbVotes": "8,267",
+      "imdbID": "tt4677934",
+      "Type": "series",
+      "totalSeasons": "4",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "7372",
+      "Title": "Batman: The Animated Series",
+      "Year": "1992–1995",
+      "Rated": "TV-PG",
+      "Released": "05 Sep 1992",
+      "Runtime": "23 min",
+      "Genre": "Animation, Action, Adventure",
+      "Director": "N/A",
+      "Writer": "Bob Kane, Eric Radomski, Bruce Timm",
+      "Actors": "Kevin Conroy, Loren Lester, Efrem Zimbalist Jr.",
+      "Plot": "The Dark Knight battles crime in Gotham City.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "Won 1 Primetime Emmy. 5 wins & 19 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYjgwZWUzMzUtYTFkNi00MzM0LWFkMWUtMDViMjMxNGIxNDUxXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "9.0/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "9.0",
+      "imdbVotes": "124,288",
+      "imdbID": "tt0103359",
+      "Type": "series",
+      "totalSeasons": "4",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "cefa",
+      "Title": "Scary Movie 4",
+      "Year": "2006",
+      "Rated": "PG-13",
+      "Released": "14 Apr 2006",
+      "Runtime": "83 min",
+      "Genre": "Comedy",
+      "Director": "David Zucker",
+      "Writer": "Craig Mazin, Jim Abrahams, Pat Proft",
+      "Actors": "Anna Faris, Regina Hall, Craig Bierko",
+      "Plot": "Cindy finds out a little boy haunts the house she lives in and she goes on a quest to solve his murder.",
+      "Language": "English, Japanese",
+      "Country": "United States",
+      "Awards": "1 win & 3 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjExNDQwM2QtYjFiNy00N2ZlLWE4ZGEtODdmYjY5NDdhNWE3XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "5.1/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "34%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "40/100"
+        }
+      ],
+      "Metascore": "40",
+      "imdbRating": "5.1",
+      "imdbVotes": "132,484",
+      "imdbID": "tt0362120",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$90,710,620",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "422c",
+      "Title": "Prom Night: An LGBT Short Film",
+      "Year": "2018",
+      "Rated": "Not Rated",
+      "Released": "03 Jun 2018",
+      "Runtime": "11 min",
+      "Genre": "Short, Drama",
+      "Director": "Jenna Larson, Marlena Damico",
+      "Writer": "Jenna Larson",
+      "Actors": "Jenna Larson, Tara DiNinno, Brian Redmon",
+      "Plot": "Callie, a closeted prom queen, has a big decision about her future on the night of her senior prom.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "N/A",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNGY0NmExZDMtZDQ1ZC00NjdmLTk5OGEtNzA1YzA1YTA3NzVmXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.5/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "7.5",
+      "imdbVotes": "85",
+      "imdbID": "tt8509746",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "e51e",
+      "Title": "Spider-Man: The Animated Series",
+      "Year": "1994–1998",
+      "Rated": "TV-Y7",
+      "Released": "19 Nov 1994",
+      "Runtime": "43S min",
+      "Genre": "Animation, Action, Adventure",
+      "Director": "N/A",
+      "Writer": "Stan Lee, Steve Ditko",
+      "Actors": "Christopher Daniel Barnes, Sara Ballantine, Edward Asner",
+      "Plot": "A young man with spider-like abilities fights crime as a superhero in New York City while trying to have a normal personal life.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "4 nominations",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYWRkN2M1NmQtZjhjMi00ODFjLTk2ODctYWJiOWNkNjg1OGY4XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.4/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "8.4",
+      "imdbVotes": "36,614",
+      "imdbID": "tt0112175",
+      "Type": "series",
+      "totalSeasons": "5",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "ff66",
+      "Title": "Night of the Living Dead 3D: Re-Animation",
+      "Year": "2012",
+      "Rated": "R",
+      "Released": "16 Oct 2012",
+      "Runtime": "88 min",
+      "Genre": "Action, Comedy, Horror",
+      "Director": "Jeff Broadstreet",
+      "Writer": "Jeff Broadstreet, Robert Valding",
+      "Actors": "Andrew Divoff, Jeffrey Combs, Sarah Lieving",
+      "Plot": "After inheriting the family mortuary, a pyrophobic mortician accidentally exposes hundreds of un-cremated bodies to toxic medical waste. As the corpses re-animate, the mortician's inheritance-seeking younger brother unexpectantly ...",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "N/A",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTU5ODgyNTI1Nl5BMl5BanBnXkFtZTcwMjEwOTA0Nw@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "3.0/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "3.0",
+      "imdbVotes": "2,165",
+      "imdbID": "tt1879012",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "1d8e"
+    }
+  ],
   "reviews": [
     {
       "id": "7a20",
@@ -22,6 +385,34 @@
       "nickname": "John Doe",
       "movieId": "tt0241527",
       "reviewText": "dasdasd"
+    },
+    {
+      "id": "3c6a",
+      "userId": "1d8e",
+      "nickname": "dasd",
+      "movieId": "tt0175142",
+      "reviewText": "вфмшв"
+    },
+    {
+      "id": "f207",
+      "userId": "1d8e",
+      "nickname": "dasd",
+      "movieId": "tt0175142",
+      "reviewText": "nice movie btw"
+    },
+    {
+      "id": "990c",
+      "userId": "1d8e",
+      "nickname": "dasd",
+      "movieId": "tt0175142",
+      "reviewText": "gasda"
+    },
+    {
+      "id": "6aab",
+      "userId": "1d8e",
+      "nickname": "dasd",
+      "movieId": "tt0175142",
+      "reviewText": "asdsagas"
     }
   ]
 }

@@ -1,1 +1,57 @@
 @import "../../../assets/css/reset.css";
+
+
+
+
+.favorites-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    padding: 20px 0;
+    font-size: 24px;
+    text-align: center;
+    color: #2e859e;
+  }
+
+  .no-favorites {
+    font-style: italic;
+    color: #999;
+    text-align: center;
+  }
+
+  .movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    
+    .favorite-item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+      .remove-btn {
+        padding: 10px 27px;
+        font-size: 14px;
+        border: none;
+        border-radius: 4px;
+        background-color: #2e859e;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #ff5c5c;
+        }
+      }
+      
+    }
+  }

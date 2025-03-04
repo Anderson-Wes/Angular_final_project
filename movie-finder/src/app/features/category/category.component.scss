@@ -1,13 +1,13 @@
 @import "../../../assets/css/reset.css";
 
 .category-wrapper {
-  padding: 16px;
+  padding: 40px;
 
   h2 {
     font-size: 30px;
     color: #2e859e;
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0;
   }
 
   .no-movies {
@@ -23,14 +23,14 @@
     flex-wrap: wrap;
     gap: 20px;
     margin: 0 auto;
-    margin-bottom: 80px;
+
   }
 
   .pagination {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 16px;
+    padding: 50px 0;
     justify-content: center;
 
     .page-btn {

@@ -1,109 +1,134 @@
-@if (isLoading()) {
-<p>Loading movie details...</p>
+ @if (isLoading()) {
+  <p class="loading-text">Loading movie details...</p>
 } @else if (movie()) {
-<div class="movie-details">
-  <div class="movie-details-section">
-    <h1>{{ movie()?.Title || "No Title Available" }}</h1>
-    <img
-      [src]="movie()?.Poster || 'https://via.placeholder.com/300'"
-      [alt]="movie()?.Title"
-    />
+  <div class="movie-details">
+    <div class="movie-details-section">
 
-    @if (movie()?.Title) {
-    <button class="trailer-button" (click)="openTrailer(movie()?.Title!)">
-      Watch Trailer
-    </button>
-    }
+      <!-- Постер, трейлер, добавление в избранное -->
+      <div class="poster-trailer-section">
+        <h1>{{ movie()?.Title || "No Title Available" }}</h1>
+        <img
+          class="movie-poster"
+          [src]="movie()?.Poster || 'https://via.placeholder.com/300'"
+          [alt]="movie()?.Title"
+        />
 
-    <div class="movie-info">
-      <table>
-        <tr class="ratings">
-          <th>Ratings:</th>
-          <td>
-            @for (rating of movie()?.Ratings; track rating) {
-            <span>{{ rating.Source }}: {{ rating.Value }} &nbsp;</span>
-            }
-          </td>
-        </tr>
-        <tr>
-          <th>Release Date:</th>
-          <td>{{ movie()?.Released || "N/A" }}</td>
-        </tr>
-        <tr>
-          <th>Country:</th>
-          <td>{{ movie()?.Country || "N/A" }}</td>
-        </tr>
-        <tr>
-          <th>Director:</th>
-          <td>{{ movie()?.Director || "N/A" }}</td>
-        </tr>
-        <tr>
-          <th>Genre:</th>
-          <td>{{ movie()?.Genre || "N/A" }}</td>
-        </tr>
-        <tr>
-          <th>Runtime:</th>
-          <td>{{ movie()?.Runtime || "N/A" }}</td>
-        </tr>
-        <tr>
-          <th>Actors:</th>
-          <td>{{ movie()?.Actors || "N/A" }}</td>
-        </tr>
-        <tr>
-          <th>Box Office:</th>
-          <td>{{ movie()?.BoxOffice || "N/A" }}</td>
-        </tr>
-        <tr>
-          <th>Awards:</th>
-          <td>{{ movie()?.Awards || "N/A" }}</td>
-        </tr>
-      </table>
+        @if (movie()?.Title) {
+          <button class="trailer-button" (click)="openTrailer(movie()?.Title!)">
+            Watch Trailer
+          </button>
+        }
+
+        <button class="favorites-btn" (click)="toggleFavorite()">
+          @if (isFavorite()) { Remove from Favorites } @else { Add to Favorites }
+        </button>
+      </div>
+
+      <!-- Основная информация о фильме -->
+      <div class="movie-info">
+        <table>
+          <tr class="ratings">
+            <th>Ratings:</th>
+            <td>
+              @for (rating of movie()?.Ratings; track rating) {
+                <span>{{ rating.Source }}: {{ rating.Value }} &nbsp;</span>
+              }
+            </td>
+          </tr>
+          <tr>
+            <th>Release Date:</th>
+            <td>{{ movie()?.Released || "N/A" }}</td>
+          </tr>
+          <tr>
+            <th>Country:</th>
+            <td>{{ movie()?.Country || "N/A" }}</td>
+          </tr>
+          <tr>
+            <th>Director:</th>
+            <td>{{ movie()?.Director || "N/A" }}</td>
+          </tr>
+          <tr>
+            <th>Genre:</th>
+            <td>{{ movie()?.Genre || "N/A" }}</td>
+          </tr>
+          <tr>
+            <th>Runtime:</th>
+            <td>{{ movie()?.Runtime || "N/A" }}</td>
+          </tr>
+          <tr>
+            <th>Actors:</th>
+            <td>{{ movie()?.Actors || "N/A" }}</td>
+          </tr>
+          <tr>
+            <th>Box Office:</th>
+            <td>{{ movie()?.BoxOffice || "N/A" }}</td>
+          </tr>
+          <tr>
+            <th>Awards:</th>
+            <td>{{ movie()?.Awards || "N/A" }}</td>
+          </tr>
+        </table>
+
+        <div class="description">
+          <h3>Description</h3>
+          <p>{{ movie()?.Plot || "No Description Available" }}</p>
+        </div>
+      </div>
+
     </div>
 
-    <div class="description">
-      <h3>Description</h3>
-      <p>{{ movie()?.Plot || "No Description Available" }}</p>
+    <!-- Раздел отзывов -->
+    <div class="reviews-section">
+      <h3>Reviews</h3>
+
+      @if (authService.getCurrentUser()) {
+        <form
+          class="review-form"
+          [formGroup]="reviewForm"
+          (ngSubmit)="submitReview()"
+        >
+          <label for="reviewText">Your Review:</label>
+          <textarea id="reviewText" formControlName="reviewText"></textarea>
+
+          @if (
+            reviewForm.controls.reviewText.invalid &&
+            reviewForm.controls.reviewText.touched
+          ) {
+            <p class="error">Review must be at least 5 characters long.</p>
+          }
+
+          <button type="submit" [disabled]="reviewForm.invalid">
+            Submit Review
+          </button>
+        </form>
+      } @else {
+        <p class="login-reminder">Please log in to leave a review.</p>
+      }
+
+      @if (reviews().length === 0) {
+        <p class="no-reviews">No reviews yet.</p>
+      } @else {
+        <div class="reviews-list">
+          @for (review of reviews(); track review) {
+            <div class="review-item">
+              <p>
+                <strong>{{ review.nickname }}</strong>:
+                {{ review.reviewText }}
+              </p>
+              @if (authService.getCurrentUser()?.id === review.userId) {
+                <button
+                  class="delete-btn"
+                  (click)="deleteReview(review.id, review.userId)"
+                >
+                  Delete
+                </button>
+              }
+            </div>
+          }
+        </div>
+      }
     </div>
   </div>
-</div>
 } @else {
-<p>Error loading movie details.</p>
-}
-
-<button class="favorites-btn" (click)="toggleFavorite()">
-  @if (isFavorite()) { Remove from Favorites } @else { Add to Favorites }
-</button>
-
-<h3>Reviews</h3>
-
-@if (authService.getCurrentUser()) {
-<form [formGroup]="reviewForm" (ngSubmit)="submitReview()">
-  <label for="review">Your Review:</label>
-  <textarea formControlName="reviewText"></textarea>
-  @if (reviewForm.controls.reviewText.invalid &&
-  reviewForm.controls.reviewText.touched) {
-  <p class="error">Review must be at least 5 characters long.</p>
-  }
-  <button type="submit" [disabled]="reviewForm.invalid">Submit Review</button>
-</form>
-} @else {
-<p>Please log in to leave a review.</p>
-} @if (reviews().length === 0) {
-<p>No reviews yet.</p>
-} @else {
-<div class="reviews-list">
-  @for (review of reviews(); track review) {
-  <div class="review-item">
-    <p>
-      <strong>{{ review.nickname }}</strong
-      >: {{ review.reviewText }}
-    </p>
-    @if (authService.getCurrentUser()?.id === review.userId) {
-    <button class="delete-btn" (click)="deleteReview(review.id, review.userId)">
-      Delete
-    </button>
-    }
-  </div>
-  }
-</div>
+  <p class="error-text">Error loading movie details.</p>
 }

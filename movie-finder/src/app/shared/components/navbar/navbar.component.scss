@@ -2,17 +2,31 @@
 
 .navbar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #1f1f1f;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+
 
   .logo-singup {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 60px;
+    width: 100%;
+    justify-content: space-between;
 
     .logo img {
-      height: 40px;
+      height: 20px;
       cursor: pointer;
+      margin-right: 10px;
+
+      &:hover {
+        color: #ff5c5c;
+      }
+
     }
 
     .menu {
@@ -27,9 +41,10 @@
 
     a {
       color: #848b8e;
-      text-decoration: none;
+      text-align: center;
       transition: 0.3s;
       padding: 10px 0;
+
 
       &:hover {
         color: #ff5c5c;
@@ -45,7 +60,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, 20%);
-        background: #1f1f1f;
+        background: #09161c;
         overflow: hidden;
         display: flex;
         flex-direction: column;
