@@ -9,7 +9,7 @@ import { IMovie, IMovieDetails } from '../../shared/interfaces/interfaces';
 export class MovieService {
   private readonly apiKey = '260d0cc5';
   private readonly apiUrl = 'https://www.omdbapi.com/';
-  private readonly favoritesUrl = 'http://localhost:4000/favorites';
+  private readonly favoritesUrl = 'http://localhost:3000/favorites';
 
   private http = inject(HttpClient);
 
@@ -35,7 +35,7 @@ export class MovieService {
   ): Observable<IMovieDetails> {
     console.log(`Adding movie to favorites:`, movie);
 
-    return this.http.post<IMovieDetails>('http://localhost:4000/favorites', {
+    return this.http.post<IMovieDetails>('http://localhost:3000/favorites', {
       ...movie,
       userId,
     });
@@ -57,7 +57,7 @@ export class MovieService {
 
   getReviews(movieId: string): Observable<any[]> {
     return this.http.get<any[]>(
-      `http://localhost:4000/reviews?movieId=${movieId}`
+      `http://localhost:3000/reviews?movieId=${movieId}`
     );
   }
 
@@ -67,7 +67,7 @@ export class MovieService {
     movieId: string,
     reviewText: string
   ): Observable<any> {
-    return this.http.post<any>('http://localhost:4000/reviews', {
+    return this.http.post<any>('http://localhost:3000/reviews', {
       userId,
       nickname,
       movieId,
@@ -76,7 +76,7 @@ export class MovieService {
   }
 
   deleteReview(reviewId: number): Observable<void> {
-    return this.http.delete<void>(`http://localhost:4000/reviews/${reviewId}`);
+    return this.http.delete<void>(`http://localhost:3000/reviews/${reviewId}`);
   }
 
   searchMoviesByCategory(

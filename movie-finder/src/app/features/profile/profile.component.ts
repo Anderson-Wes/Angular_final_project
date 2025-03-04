@@ -82,7 +82,7 @@ export class ProfileComponent {
 
         this.http
           .put<IUser>(
-            `http://localhost:4000/users/${updatedUser.id}`,
+            `http://localhost:3000/users/${updatedUser.id}`,
             updatedUser
           )
           .subscribe(() => {
@@ -118,7 +118,7 @@ export class ProfileComponent {
     };
 
     this.http
-      .put<IUser>(`http://localhost:4000/users/${updatedUser.id}`, updatedUser)
+      .put<IUser>(`http://localhost:3000/users/${updatedUser.id}`, updatedUser)
       .subscribe(() => {
         this.user.set(updatedUser);
         this.errorMessage.set(null);

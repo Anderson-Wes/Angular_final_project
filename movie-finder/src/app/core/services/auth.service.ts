@@ -9,7 +9,7 @@ import { IUser } from '../../shared/interfaces/interfaces';
   providedIn: 'root',
 }) //makes the service globaly available
 export class AuthService {
-  private apiUrl = 'http://localhost:4000/users';
+  private apiUrl = 'http://localhost:3000/users';
   private currentUser = signal<IUser | null>(null); //to store the current user
 
   constructor(private http: HttpClient, private router: Router) {
