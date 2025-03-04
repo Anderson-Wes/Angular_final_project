@@ -1,21 +1,25 @@
 <div class="auth-container">
   <h2>Register</h2>
 
+  @if (errorMessage()) {
+  <p class="error">{{ errorMessage() }}</p>
+  }
+
   <form [formGroup]="form">
-    <label>Full Name</label>
-    <input type="text" formControlName="fullName" />
+    <label for="fullName">Full Name</label>
+    <input id="fullName" type="text" formControlName="fullName" />
     @if (form.controls.fullName.invalid && form.controls.fullName.touched) {
     <p class="error">Name must contain only letters</p>
     }
 
-    <label>Email</label>
-    <input type="email" formControlName="email" />
+    <label for="email">Email</label>
+    <input id="email" type="email" formControlName="email" />
     @if (form.controls.email.invalid && form.controls.email.touched) {
     <p class="error">Invalid email format</p>
     }
 
-    <label>Password</label>
-    <input type="password" formControlName="password" />
+    <label for="password">Password</label>
+    <input id="password" type="password" formControlName="password" />
     @if (form.controls.password.invalid && form.controls.password.touched) {
     <p class="error">
       Password must be at least 8 characters, include a digit and an uppercase
@@ -23,8 +27,12 @@
     </p>
     }
 
-    <label>Confirm Password</label>
-    <input type="password" formControlName="confirmPassword" />
+    <label for="confirmPassword">Confirm Password</label>
+    <input
+      id="confirmPassword"
+      type="password"
+      formControlName="confirmPassword"
+    />
     @if (form.controls.confirmPassword.invalid &&
     form.controls.confirmPassword.touched) {
     <p class="error">Passwords must match</p>

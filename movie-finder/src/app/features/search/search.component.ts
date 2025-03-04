@@ -6,7 +6,6 @@ import { IMovie } from '../../shared/interfaces/interfaces';
 import { MovieCardComponent } from '../../shared/movie-card/movie-card.component';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
 
-
 @Component({
   standalone: true,
   selector: 'app-search',

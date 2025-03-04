@@ -1,9 +1,8 @@
 @import "../../../../assets/css/reset.css";
 
-
 .sidebar {
-  padding: 20px 0; 
-  background-color: #222D33;
+  padding: 20px 0;
+  background-color: #222d33;
   width: 100%;
 
   ul {
@@ -14,13 +13,11 @@
     a {
       color: #848b8e;
       font-size: 16px;
-      transition: 0.3s ease-in-out;
-    
+      transition: color 0.3s ease-in-out;
+
       &:hover {
         color: #ff5c5c;
       }
     }
   }
-
 }
-

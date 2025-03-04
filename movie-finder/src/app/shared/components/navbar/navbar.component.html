@@ -1,28 +1,31 @@
-
 <nav class="navbar">
-  <div>
+  <div class="logo-singup">
     <a routerLink="/" class="logo">
-      <img src="../../../../assets/img/logo.png" alt="Logo">
+      <img src="../../../../assets/img/logo.png" alt="Logo" />
     </a>
-  </div>
 
-  <div class="menu">
-    @if (authService.getCurrentUser()) {
+    <div class="menu">
+      @if (authService.getCurrentUser()) {
       <a routerLink="/favorites">Favorites</a>
 
-      <div class="profile-menu" (mouseenter)="toggleDropdown()" (mouseleave)="toggleDropdown()">
+      <div
+        class="profile-menu"
+        (mouseenter)="toggleDropdown()"
+        (mouseleave)="toggleDropdown()"
+      >
         <a class="profile-link">Profile</a>
 
         @if (isDropdownOpen()) {
-          <div class="dropdown">
-            <a routerLink="/profile">Settings</a>
-            <a (click)="logout()">Logout</a>
-          </div>
+        <div class="dropdown">
+          <a routerLink="/profile">Settings</a>
+          <a (click)="logout()">Logout</a>
+        </div>
         }
       </div>
-    } @else {
+      } @else {
       <a routerLink="/login">Login</a>
       <a routerLink="/register">Register</a>
-    }
+      }
+    </div>
   </div>
 </nav>

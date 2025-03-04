@@ -1,7 +1,103 @@
+// import { Injectable, inject } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+// import { Observable, switchMap, of } from 'rxjs';
+// import { IMovie, IMovieDetails } from '../../shared/interfaces/interfaces';
+
+// @Injectable({
+//   providedIn: 'root',
+// })
+// export class MovieService {
+//   private readonly apiKey = '260d0cc5';
+//   private readonly apiUrl = 'https://www.omdbapi.com/';
+//   private readonly favoritesUrl = 'http://localhost:3000/favorites';
+
+//   private http = inject(HttpClient);
+
+//   searchMovies(query: string): Observable<{ Search: IMovie[] }> {
+//     return this.http.get<{ Search: IMovie[] }>(
+//       `${this.apiUrl}?s=${query}&apikey=${this.apiKey}`
+//     );
+//   }
+
+//   getMovieDetails(movieId: string): Observable<IMovieDetails> {
+//     return this.http.get<IMovieDetails>(
+//       `${this.apiUrl}?i=${movieId}&apikey=${this.apiKey}`
+//     );
+//   }
+
+//   getFavorites(userId: number): Observable<IMovie[]> {
+//     return this.http.get<IMovie[]>(`${this.favoritesUrl}?userId=${userId}`);
+//   }
+
+//   addToFavorites(
+//     userId: number,
+//     movie: IMovieDetails
+//   ): Observable<IMovieDetails> {
+//     console.log(`Adding movie to favorites:`, movie);
+
+//     return this.http.post<IMovieDetails>('http://localhost:3000/favorites', {
+//       ...movie,
+//       userId,
+//     });
+//   }
+
+//   removeFromFavorites(userId: number, movieId: string): Observable<void> {
+//     return this.http
+//       .get<any[]>(`${this.favoritesUrl}?userId=${userId}&imdbID=${movieId}`)
+//       .pipe(
+//         switchMap((favorites) => {
+//           if (favorites.length === 0) {
+//             return of();
+//           }
+//           const favoriteId = favorites[0].id;
+//           return this.http.delete<void>(`${this.favoritesUrl}/${favoriteId}`);
+//         })
+//       );
+//   }
+
+//   getReviews(movieId: string): Observable<any[]> {
+//     return this.http.get<any[]>(
+//       `http://localhost:3000/reviews?movieId=${movieId}`
+//     );
+//   }
+
+//   addReview(
+//     userId: number,
+//     nickname: string,
+//     movieId: string,
+//     reviewText: string
+//   ): Observable<any> {
+//     return this.http.post<any>('http://localhost:3000/reviews', {
+//       userId,
+//       nickname,
+//       movieId,
+//       reviewText,
+//     });
+//   }
+
+//   deleteReview(reviewId: number): Observable<void> {
+//     return this.http.delete<void>(`http://localhost:3000/reviews/${reviewId}`);
+//   }
+
+//   searchMoviesByCategory(
+//     category: string,
+//     page: number = 1
+//   ): Observable<{ Search: IMovie[]; totalResults: string }> {
+//     return this.http.get<{ Search: IMovie[]; totalResults: string }>(
+//       `${this.apiUrl}?s=${category}&page=${page}&apikey=${this.apiKey}`
+//     );
+//   }
+// }
+
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, switchMap, of } from 'rxjs';
-import { IMovie, IMovieDetails } from '../../shared/interfaces/interfaces';
+import { Observable, of, switchMap } from 'rxjs';
+import {
+  IMovie,
+  IMovieDetails,
+  IReview,
+} from '../../shared/interfaces/interfaces';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -9,65 +105,67 @@ import { IMovie, IMovieDetails } from '../../shared/interfaces/interfaces';
 export class MovieService {
   private readonly apiKey = '260d0cc5';
   private readonly apiUrl = 'https://www.omdbapi.com/';
-  private readonly favoritesUrl = 'http://localhost:3000/favorites';
 
-  private http = inject(HttpClient);
+  private readonly baseJsonUrl = environment.apiBaseUrl;
+  private readonly favoritesUrl = `${this.baseJsonUrl}/favorites`;
+  private readonly reviewsUrl = `${this.baseJsonUrl}/reviews`;
 
-  searchMovies(query: string): Observable<{ Search: IMovie[] }> {
+  private readonly http = inject(HttpClient);
+
+  public searchMovies(query: string): Observable<{ Search: IMovie[] }> {
     return this.http.get<{ Search: IMovie[] }>(
       `${this.apiUrl}?s=${query}&apikey=${this.apiKey}`
     );
   }
 
-  getMovieDetails(movieId: string): Observable<IMovieDetails> {
+  public getMovieDetails(movieId: string): Observable<IMovieDetails> {
     return this.http.get<IMovieDetails>(
       `${this.apiUrl}?i=${movieId}&apikey=${this.apiKey}`
     );
   }
 
-  getFavorites(userId: number): Observable<IMovie[]> {
+  public getFavorites(userId: number): Observable<IMovie[]> {
     return this.http.get<IMovie[]>(`${this.favoritesUrl}?userId=${userId}`);
   }
 
-  addToFavorites(
+  public addToFavorites(
     userId: number,
     movie: IMovieDetails
   ): Observable<IMovieDetails> {
-    console.log(`Adding movie to favorites:`, movie);
-
-    return this.http.post<IMovieDetails>('http://localhost:3000/favorites', {
+    return this.http.post<IMovieDetails>(this.favoritesUrl, {
       ...movie,
       userId,
     });
   }
 
-  removeFromFavorites(userId: number, movieId: string): Observable<void> {
+  public removeFromFavorites(
+    userId: number,
+    movieId: string
+  ): Observable<void> {
     return this.http
-      .get<any[]>(`${this.favoritesUrl}?userId=${userId}&imdbID=${movieId}`)
+      .get<IMovie[]>(`${this.favoritesUrl}?userId=${userId}&imdbID=${movieId}`)
       .pipe(
         switchMap((favorites) => {
           if (favorites.length === 0) {
-            return of();
+            return of(undefined);
           }
-          const favoriteId = favorites[0].id;
+          const favoriteId = (favorites[0] as any).id;
           return this.http.delete<void>(`${this.favoritesUrl}/${favoriteId}`);
         })
       );
   }
 
-  getReviews(movieId: string): Observable<any[]> {
-    return this.http.get<any[]>(
-      `http://localhost:3000/reviews?movieId=${movieId}`
-    );
+  public getReviews(movieId: string): Observable<IReview[]> {
+    return this.http.get<IReview[]>(`${this.reviewsUrl}?movieId=${movieId}`);
   }
 
-  addReview(
+  public addReview(
     userId: number,
     nickname: string,
     movieId: string,
     reviewText: string
-  ): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/reviews', {
+  ): Observable<IReview> {
+    return this.http.post<IReview>(this.reviewsUrl, {
       userId,
       nickname,
       movieId,
@@ -75,13 +173,13 @@ export class MovieService {
     });
   }
 
-  deleteReview(reviewId: number): Observable<void> {
-    return this.http.delete<void>(`http://localhost:3000/reviews/${reviewId}`);
+  public deleteReview(reviewId: number): Observable<void> {
+    return this.http.delete<void>(`${this.reviewsUrl}/${reviewId}`);
   }
 
-  searchMoviesByCategory(
+  public searchMoviesByCategory(
     category: string,
-    page: number = 1
+    page = 1
   ): Observable<{ Search: IMovie[]; totalResults: string }> {
     return this.http.get<{ Search: IMovie[]; totalResults: string }>(
       `${this.apiUrl}?s=${category}&page=${page}&apikey=${this.apiKey}`

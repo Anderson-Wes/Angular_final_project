@@ -1,21 +1,48 @@
-<h2>{{ category() | titlecase }} Movies</h2>
+<div class="category-wrapper">
+  <h2>{{ category() | titlecase }} Movies</h2>
 
-@if (movies().length === 0) {
-<p>No movies found in this category.</p>
-} @else {
-<div class="movies-list">
-  @for (movie of movies(); track movie) {
-  <app-movie-card [movie]="movie"></app-movie-card>
+  @if (movies().length === 0) {
+  <p class="no-movies">No movies found in this category.</p>
+  } @else {
+  <div class="movies-list">
+    @for (movie of movies(); track movie) {
+    <app-movie-card [movie]="movie"></app-movie-card>
+    }
+  </div>
+
+  <div class="pagination">
+    <button
+      class="page-btn prev"
+      (click)="changePage('prev')"
+      [disabled]="currentPage() === 1"
+    >
+      Prev
+    </button>
+
+    @for (p of pages(); track p) { @if (typeof p === 'string') {
+    <span class="dots">{{ p }}</span>
+    } @else {
+    <button
+      class="page-btn"
+      (click)="changePage($any(p))"
+      [disabled]="p === currentPage()"
+      [class.active]="p === currentPage()"
+    >
+      {{ p }}
+    </button>
+    } }
+
+    <button
+      class="page-btn next"
+      (click)="changePage('next')"
+      [disabled]="currentPage() >= totalPages()"
+    >
+      Next
+    </button>
+
+    <span class="page-info">
+      Page {{ currentPage() }} of {{ totalPages() }}
+    </span>
+  </div>
   }
 </div>
-
-<div class="pagination">
-  <button (click)="changePage(-1)" [disabled]="currentPage() === 1">
-    Previous
-  </button>
-  <span>Page {{ currentPage() }} of {{ getTotalPages() }}</span>
-  <button (click)="changePage(1)" [disabled]="currentPage() >= getTotalPages()">
-    Next
-  </button>
-</div>
-}

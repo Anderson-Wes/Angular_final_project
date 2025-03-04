@@ -1,4 +1,4 @@
-<div class="profile-container">
+<!-- <div class="profile-container">
   <h2>My Profile</h2>
 
   @if (errorMessage()) {
@@ -40,6 +40,86 @@
     @if (form.value.newPassword !== form.value.confirmPassword) {
     <p class="error">Passwords must match</p>
     }
+
+    <button type="button" (click)="changePassword()">Change Password</button>
+  </form>
+</div> -->
+
+<div class="profile-container">
+  <h2>My Profile</h2>
+
+  <!-- Ошибки -->
+  <p class="error" *ngIf="errorMessage()">
+    {{ errorMessage() }}
+  </p>
+
+  <!-- Форма данных профиля (имя и email) -->
+  <form [formGroup]="profileForm">
+    <label for="fullName">Full Name</label>
+    <input
+      id="fullName"
+      type="text"
+      formControlName="fullName"
+      [readonly]="!isEditing()"
+    />
+
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      [readonly]="!isEditing()"
+    />
+
+    <!-- Кнопки управления -->
+    <div *ngIf="isEditing(); else readMode">
+      <button type="button" (click)="saveProfileChanges()">Save Changes</button>
+      <button type="button" (click)="toggleEdit()">Cancel</button>
+    </div>
+    <ng-template #readMode>
+      <button type="button" (click)="toggleEdit()">Edit Profile</button>
+    </ng-template>
+  </form>
+
+  <h3>Change Password</h3>
+
+  <!-- Отдельная форма для смены пароля -->
+  <form [formGroup]="passwordForm">
+    <label for="currentPassword">Current Password</label>
+    <input
+      id="currentPassword"
+      type="password"
+      formControlName="currentPassword"
+    />
+
+    <label for="newPassword">New Password</label>
+    <input id="newPassword" type="password" formControlName="newPassword" />
+    <p
+      class="error"
+      *ngIf="
+        passwordForm.controls.newPassword.invalid &&
+        passwordForm.controls.newPassword.touched
+      "
+    >
+      Password must be at least 8 characters long, include a digit and an
+      uppercase letter.
+    </p>
+
+    <label for="confirmPassword">Confirm New Password</label>
+    <input
+      id="confirmPassword"
+      type="password"
+      formControlName="confirmPassword"
+    />
+    <p
+      class="error"
+      *ngIf="
+        passwordForm.value.newPassword !== passwordForm.value.confirmPassword &&
+        passwordForm.controls.confirmPassword.touched
+      "
+    >
+      Passwords must match
+    </p>
 
     <button type="button" (click)="changePassword()">Change Password</button>
   </form>

@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "id": 1,
-      "fullName": "John Doe",
-      "email": "john@example.com",
-      "password": "Password1"
+      "id": "1",
+      "fullName": "John Doeaasdasgfsdas",
+      "email": "john@examdpadslase.com",
+      "password": "q1w2Link"
     }
   ],
   "favorites": [],
@@ -15,6 +15,13 @@
       "nickname": "david",
       "movieId": "tt1201607",
       "reviewText": "sdasdgasd"
+    },
+    {
+      "id": "d1eb",
+      "userId": "1",
+      "nickname": "John Doe",
+      "movieId": "tt0241527",
+      "reviewText": "dasdasd"
     }
   ]
 }
