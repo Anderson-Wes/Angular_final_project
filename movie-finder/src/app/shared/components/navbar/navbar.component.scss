@@ -18,15 +18,17 @@
     width: 100%;
     justify-content: space-between;
 
-    .logo img {
-      height: 20px;
-      cursor: pointer;
-      margin-right: 10px;
-
-      &:hover {
-        color: #ff5c5c;
+    .logo {
+      img {
+        height: 20px;
+        cursor: pointer;
+        transition: filter 0.05s ease-in-out;
+        margin-right: 4px;
       }
-
+  
+      &:hover img {
+        filter: brightness(0) invert(1);
+      }
     }
 
     .menu {

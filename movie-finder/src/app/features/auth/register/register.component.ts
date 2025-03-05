@@ -52,7 +52,6 @@ export class RegisterComponent {
   public errorMessage = signal<string | null>(null);
 
   constructor() {
-    // Следим за любыми изменениями статуса формы
     this.form.statusChanges.subscribe(() => {
       this.isValid.set(this.form.valid);
     });

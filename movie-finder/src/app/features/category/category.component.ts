@@ -17,14 +17,12 @@ export class CategoryComponent {
   private readonly router = inject(Router);
   private readonly movieService = inject(MovieService);
 
-  // Сигналы
   public category = signal<string>('');
   public currentPage = signal<number>(1);
   public totalResults = signal<number>(0);
   public movies = signal<IMovie[]>([]);
 
   constructor() {
-    // Следим за изменением параметров (type, page) и запрашиваем данные
     effect(() => {
       this.route.paramMap.subscribe((params) => {
         const type = params.get('type') ?? '';
@@ -33,7 +31,6 @@ export class CategoryComponent {
         this.category.set(type);
         this.currentPage.set(page);
 
-        // Запрашиваем фильмы
         this.movieService
           .searchMoviesByCategory(type, page)
           .subscribe((data) => {

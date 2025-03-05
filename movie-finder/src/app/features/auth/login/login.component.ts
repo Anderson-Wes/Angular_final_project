@@ -39,7 +39,6 @@ export class LoginComponent {
   public errorMessage = signal<string | null>(null);
 
   constructor() {
-    // Следим за изменениями статуса формы и сигнализируем о валидности
     this.form.statusChanges.subscribe(() => {
       this.isValid.set(this.form.valid);
     });
