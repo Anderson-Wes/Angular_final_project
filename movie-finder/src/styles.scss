@@ -1,82 +1,9 @@
-/* 1. Импорт reset.css */
+
 @import "./assets/css/reset.css";
 
-/* 2. Базовые стили для html/body */
 html,
 body {
-  font-family: "Roboto", sans-serif; /* Или другой */
-  background-color: #09161c; /* Тёмный фон по умолчанию */
-  color: #f1f1f1; /* Светлый цвет текста */
+  font-family: "Roboto", sans-serif;
+  background-color: #09161c;
+  color: #f1f1f1;
 }
-
-/* 3. Контейнер-обёртка */
-
-/* Пример: базовые стили для заголовков (необязательно) */
-/*
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: 500;
-  line-height: 1.2;
-  text-align: center;
-  color: #2e859e;
-}
-*/
-
-/* Пример: базовые стили для ссылок (необязательно) */
-/*
-a {
-  color: #2e859e;
-  text-decoration: none;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: #ff5c5c;
-  }
-}
-*/
-
-/* 
-  Если вам нужны глобальные стили для .search-container,
-  добавьте их либо в соответствующий search.component.scss,
-  либо ниже. Например:
-
-.search-container {
-  h1 {
-    font-size: 42px;
-    padding: 100px 0;
-    text-align: center;
-    color: #2e859e;
-    transition: font-size 0.3s;
-  }
-
-  .search-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
-
-    input[type="text"] {
-      width: 100%;
-      max-width: 600px;
-      padding: 10px;
-      border-radius: 4px;
-      border: none;
-      outline: none;
-    }
-  }
-}
-
-  При этом, в @media (max-width: 768px) 
-  можно переопределять стили:
-  @media (max-width: 768px) {
-    .search-container {
-      h1 {
-        font-size: 28px;
-        padding: 60px 0;
-      }
-      .search-box {
-        flex-direction: column;
-      }
-    }
-  }
-*/

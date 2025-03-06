@@ -12,8 +12,8 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root',
 })
 export class MovieService {
-  private readonly apiKey = '260d0cc5';
-  private readonly apiUrl = 'https://www.omdbapi.com/';
+  private readonly apiUrl = environment.omdbApiUrl;
+  private readonly apiKey = environment.omdbApiKey;
 
   private readonly baseJsonUrl = environment.apiBaseUrl;
   private readonly favoritesUrl = `${this.baseJsonUrl}/favorites`;

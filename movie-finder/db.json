@@ -13,57 +13,15 @@
       "password": "Q1W2E3R4"
     },
     {
-      "id": "4008",
-      "fullName": "Malefic",
-      "email": "qatalandze.n@gmail.com",
-      "password": "MAlefic1997n"
+      "id": "2f58",
+      "fullName": "Anderson",
+      "email": "anderson.wes420@gmail.com",
+      "password": "Q1W2E3R4"
     }
   ],
   "favorites": [
     {
-      "id": "4d42",
-      "Title": "The Lego Movie",
-      "Year": "2014",
-      "Rated": "PG",
-      "Released": "07 Feb 2014",
-      "Runtime": "100 min",
-      "Genre": "Animation, Action, Adventure",
-      "Director": "Phil Lord, Christopher Miller",
-      "Writer": "Phil Lord, Christopher Miller, Dan Hageman",
-      "Actors": "Chris Pratt, Will Ferrell, Elizabeth Banks",
-      "Plot": "An ordinary LEGO construction worker, thought to be the prophesied as \"special\", is recruited to join a quest to stop an evil tyrant from gluing the LEGO universe into eternal stasis.",
-      "Language": "English, Turkish",
-      "Country": "United States, Denmark, Australia, Norway",
-      "Awards": "Nominated for 1 Oscar. 72 wins & 67 nominations total",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMTg4MDk1ODExN15BMl5BanBnXkFtZTgwNzIyNjg3MDE@._V1_SX300.jpg",
-      "Ratings": [
-        {
-          "Source": "Internet Movie Database",
-          "Value": "7.7/10"
-        },
-        {
-          "Source": "Rotten Tomatoes",
-          "Value": "96%"
-        },
-        {
-          "Source": "Metacritic",
-          "Value": "83/100"
-        }
-      ],
-      "Metascore": "83",
-      "imdbRating": "7.7",
-      "imdbVotes": "398,133",
-      "imdbID": "tt1490017",
-      "Type": "movie",
-      "DVD": "N/A",
-      "BoxOffice": "$257,966,122",
-      "Production": "N/A",
-      "Website": "N/A",
-      "Response": "True",
-      "userId": "1d8e"
-    },
-    {
-      "id": "dabf",
+      "id": "292a",
       "Title": "Scary Movie",
       "Year": "2000",
       "Rated": "R",
@@ -105,107 +63,258 @@
       "userId": "1d8e"
     },
     {
-      "id": "a2ca",
-      "Title": "A Series of Unfortunate Events",
-      "Year": "2017–2019",
-      "Rated": "TV-PG",
-      "Released": "13 Jan 2017",
+      "id": "5b49",
+      "Title": "From Dusk Till Dawn: The Series",
+      "Year": "2014–2016",
+      "Rated": "TV-MA",
+      "Released": "11 Mar 2014",
       "Runtime": "2 min",
-      "Genre": "Adventure, Comedy, Drama",
+      "Genre": "Action, Crime, Fantasy",
       "Director": "N/A",
-      "Writer": "N/A",
-      "Actors": "Neil Patrick Harris, Patrick Warburton, Malina Pauli Weissman",
-      "Plot": "After the loss of their parents in a mysterious fire, the three Baudelaire children face trials and tribulations attempting to uncover dark family secrets.",
+      "Writer": "Robert Rodriguez",
+      "Actors": "D.J. Cotrona, Zane Holtz, Jesse Garcia",
+      "Plot": "A Texas Ranger is in hot pursuit of the infamous Gecko brothers and their hostages. They all end up trapped in a desert bar secretly run by vampires and discover a vampire conspiracy.",
       "Language": "English",
       "Country": "United States",
-      "Awards": "Nominated for 6 Primetime Emmys. 19 wins & 46 nominations total",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMTUxMjIzODI0NV5BMl5BanBnXkFtZTgwMDk3OTI2MDI@._V1_SX300.jpg",
+      "Awards": "7 nominations",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ5MTQxNDYxMV5BMl5BanBnXkFtZTgwNzk0MjkxNjE@._V1_SX300.jpg",
       "Ratings": [
         {
           "Source": "Internet Movie Database",
-          "Value": "7.7/10"
+          "Value": "6.8/10"
         }
       ],
       "Metascore": "N/A",
-      "imdbRating": "7.7",
-      "imdbVotes": "68,577",
-      "imdbID": "tt4834206",
+      "imdbRating": "6.8",
+      "imdbVotes": "21,737",
+      "imdbID": "tt3337194",
       "Type": "series",
       "totalSeasons": "3",
       "Response": "True",
       "userId": "1d8e"
     },
     {
-      "id": "79cc",
-      "Title": "Chasing Trane: The John Coltrane Documentary",
-      "Year": "2016",
-      "Rated": "Not Rated",
-      "Released": "14 Apr 2017",
-      "Runtime": "99 min",
-      "Genre": "Documentary, Biography, History",
-      "Director": "John Scheinfeld",
-      "Writer": "John Scheinfeld",
-      "Actors": "Denzel Washington, Reggie Workman, Ravi Coltrane",
-      "Plot": "An exploration of the global power and impact of the music of John Coltrane where the passions, experiences and forces that shaped his life and revolutionary sounds are revealed.",
+      "id": "e3c6",
+      "Title": "Bee Movie",
+      "Year": "2007",
+      "Rated": "PG",
+      "Released": "02 Nov 2007",
+      "Runtime": "91 min",
+      "Genre": "Animation, Adventure, Comedy",
+      "Director": "Simon J. Smith, Steve Hickner",
+      "Writer": "Jerry Seinfeld, Spike Feresten, Barry Marder",
+      "Actors": "Jerry Seinfeld, Renée Zellweger, Matthew Broderick",
+      "Plot": "Barry B. Benson, a bee just graduated from college, is disillusioned at his lone career choice: making honey. On a special trip outside the hive, Barry's life is saved by Vanessa, a florist in New York City. As their relationship ...",
       "Language": "English",
-      "Country": "United States",
-      "Awards": "1 nomination",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMzRhMDVhZDgtYTcwZi00MDBlLWJkZjItNjY2YmEyYmVhZDk3XkEyXkFqcGc@._V1_SX300.jpg",
+      "Country": "United States, Canada",
+      "Awards": "1 win & 15 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjE1MDYxOTA4MF5BMl5BanBnXkFtZTcwMDE0MDUzMw@@._V1_SX300.jpg",
       "Ratings": [
         {
           "Source": "Internet Movie Database",
-          "Value": "7.3/10"
+          "Value": "6.1/10"
         },
         {
           "Source": "Rotten Tomatoes",
-          "Value": "74%"
+          "Value": "49%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "54/100"
         }
       ],
-      "Metascore": "N/A",
-      "imdbRating": "7.3",
-      "imdbVotes": "2,523",
-      "imdbID": "tt4283892",
+      "Metascore": "54",
+      "imdbRating": "6.1",
+      "imdbVotes": "185,327",
+      "imdbID": "tt0389790",
       "Type": "movie",
       "DVD": "N/A",
-      "BoxOffice": "$406,284",
+      "BoxOffice": "$126,631,277",
       "Production": "N/A",
       "Website": "N/A",
       "Response": "True",
       "userId": "1d8e"
     },
     {
-      "id": "e41d",
-      "Title": "Documentary Now!",
-      "Year": "2015–",
-      "Rated": "TV-14",
-      "Released": "20 Aug 2015",
-      "Runtime": "23 min",
+      "id": "2838",
+      "Title": "Scary Movie 3",
+      "Year": "2003",
+      "Rated": "PG-13",
+      "Released": "24 Oct 2003",
+      "Runtime": "84 min",
       "Genre": "Comedy",
-      "Director": "N/A",
-      "Writer": "Fred Armisen, Bill Hader, Seth Meyers",
-      "Actors": "Helen Mirren, Fred Armisen, Bill Hader",
-      "Plot": "\"Documentary Now!\" parodies the current obsession with documentaries. Season one features six different stories and stylistic approaches paying tribute to the doc format.",
+      "Director": "David Zucker",
+      "Writer": "Craig Mazin, Pat Proft, Shawn Wayans",
+      "Actors": "Anna Faris, Charlie Sheen, Regina Hall",
+      "Plot": "Cindy must investigate mysterious crop circles and video tapes, and help the President in preventing an alien invasion.",
       "Language": "English",
-      "Country": "United States",
-      "Awards": "Nominated for 6 Primetime Emmys. 3 wins & 21 nominations total",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ2Mjg3NTA5NV5BMl5BanBnXkFtZTgwNzExNTU1NjE@._V1_SX300.jpg",
+      "Country": "United States, Canada",
+      "Awards": "2 wins & 4 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNDE2NTIyMjg2OF5BMl5BanBnXkFtZTYwNDEyMTg3._V1_SX300.jpg",
       "Ratings": [
         {
           "Source": "Internet Movie Database",
-          "Value": "8.1/10"
+          "Value": "5.6/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "35%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "49/100"
         }
       ],
-      "Metascore": "N/A",
-      "imdbRating": "8.1",
-      "imdbVotes": "8,267",
-      "imdbID": "tt4677934",
-      "Type": "series",
-      "totalSeasons": "4",
+      "Metascore": "49",
+      "imdbRating": "5.6",
+      "imdbVotes": "162,696",
+      "imdbID": "tt0306047",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$110,003,217",
+      "Production": "N/A",
+      "Website": "N/A",
       "Response": "True",
       "userId": "1d8e"
     },
     {
-      "id": "7372",
+      "id": "657e",
+      "Title": "No Impact Man: The Documentary",
+      "Year": "2009",
+      "Rated": "Not Rated",
+      "Released": "17 Jun 2010",
+      "Runtime": "93 min",
+      "Genre": "Documentary",
+      "Director": "Laura Gabbert, Justin Schein",
+      "Writer": "N/A",
+      "Actors": "Colin Beavan, Michelle Conlin",
+      "Plot": "Follow the Manhattan-based Beavan family as they abandon their high consumption 5th Avenue lifestyle and try to live a year while making no net environmental impact.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "1 win",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTA2MzM0ODIxMDheQTJeQWpwZ15BbWU3MDc1OTMzNzI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.6/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "83%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "66/100"
+        }
+      ],
+      "Metascore": "66",
+      "imdbRating": "6.6",
+      "imdbVotes": "1,593",
+      "imdbID": "tt1280011",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$100,028",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "9a80",
+      "Title": "Scott Pilgrim vs. the Animation",
+      "Year": "2010",
+      "Rated": "N/A",
+      "Released": "12 Aug 2010",
+      "Runtime": "4 min",
+      "Genre": "Animation, Short, Action",
+      "Director": "N/A",
+      "Writer": "Bryan Lee O'Malley",
+      "Actors": "Georgette Perna, Steve Blum, Michael Cera",
+      "Plot": "High school student Scott Pilgrim starts a band with Lisa Miller and battles Simon Lee to rescue, romance and recruit drummer Kim Pine.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "N/A",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYmRmOWI4YzEtNTYxMi00ZTMxLTk2MzgtYjZiMTBiNWY1NTk3XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.5/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "7.5",
+      "imdbVotes": "1,353",
+      "imdbID": "tt1707823",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "b6d1",
+      "Title": "Sword Gai: The Animation",
+      "Year": "2018",
+      "Rated": "TV-MA",
+      "Released": "23 Mar 2018",
+      "Runtime": "22 min",
+      "Genre": "Animation, Fantasy",
+      "Director": "N/A",
+      "Writer": "N/A",
+      "Actors": "Erica Lindbeck, Zach Aguilar, Patrick Seitz",
+      "Plot": "A boy bonds with a demon sword.",
+      "Language": "Japanese",
+      "Country": "Japan",
+      "Awards": "N/A",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYTEwYzhmYjgtZmU5Ni00ODAwLTg5NTAtZWZiMmUyYmYwZmY1XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "5.8/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "5.8",
+      "imdbVotes": "1,138",
+      "imdbID": "tt7415066",
+      "Type": "series",
+      "totalSeasons": "2",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "c765",
+      "Title": "Stage Musicals vs. TV Shiny Floor Shows",
+      "Year": "2013",
+      "Rated": "N/A",
+      "Released": "N/A",
+      "Runtime": "36 min",
+      "Genre": "Documentary, Short",
+      "Director": "Serafeim Dousias",
+      "Writer": "Serafeim Ntousias",
+      "Actors": "Mike Beale, Giannis Bezos, Laurence Connor",
+      "Plot": "What is the influence of TV prime time shows or the well-known Shiny Floor Shows into Stage Musical of West End and Broadway? What is the great impact of Andrew's Lloyd Webber stage musicals into UK TV?",
+      "Language": "English, Greek",
+      "Country": "United Kingdom, Greece",
+      "Awards": "N/A",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjIxMzUyMDc3MV5BMl5BanBnXkFtZTgwNTg2NzAwMjE@._V1_SX300.jpg",
+      "Ratings": [],
+      "Metascore": "N/A",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "imdbID": "tt3764636",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "696f",
       "Title": "Batman: The Animated Series",
       "Year": "1992–1995",
       "Rated": "TV-PG",
@@ -236,145 +345,624 @@
       "userId": "1d8e"
     },
     {
-      "id": "cefa",
-      "Title": "Scary Movie 4",
-      "Year": "2006",
-      "Rated": "PG-13",
-      "Released": "14 Apr 2006",
-      "Runtime": "83 min",
-      "Genre": "Comedy",
-      "Director": "David Zucker",
-      "Writer": "Craig Mazin, Jim Abrahams, Pat Proft",
-      "Actors": "Anna Faris, Regina Hall, Craig Bierko",
-      "Plot": "Cindy finds out a little boy haunts the house she lives in and she goes on a quest to solve his murder.",
-      "Language": "English, Japanese",
+      "id": "d21d",
+      "Title": "Minimalism: A Documentary About the Important Things",
+      "Year": "2015",
+      "Rated": "Not Rated",
+      "Released": "15 Dec 2016",
+      "Runtime": "78 min",
+      "Genre": "Documentary",
+      "Director": "Matt D'Avella",
+      "Writer": "N/A",
+      "Actors": "Dan Harris, Ryan Nicodemus, Rick Hanson",
+      "Plot": "How might your life be better with less?",
+      "Language": "English",
       "Country": "United States",
-      "Awards": "1 win & 3 nominations total",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMjExNDQwM2QtYjFiNy00N2ZlLWE4ZGEtODdmYjY5NDdhNWE3XkEyXkFqcGc@._V1_SX300.jpg",
+      "Awards": "N/A",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZWQ1ZDljNDAtYWI4ZC00NWVkLTgwOTctZmM4MDc5MDJiMjU5XkEyXkFqcGc@._V1_SX300.jpg",
       "Ratings": [
         {
           "Source": "Internet Movie Database",
-          "Value": "5.1/10"
+          "Value": "6.6/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "6.6",
+      "imdbVotes": "16,854",
+      "imdbID": "tt3810760",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$261,865",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "1d8e"
+    },
+    {
+      "id": "1254",
+      "Title": "Death Note",
+      "Year": "2006–2007",
+      "Rated": "TV-14",
+      "Released": "21 Oct 2007",
+      "Runtime": "24 min",
+      "Genre": "Animation, Crime, Drama",
+      "Director": "N/A",
+      "Writer": "N/A",
+      "Actors": "Mamoru Miyano, Brad Swaile, Vincent Tong",
+      "Plot": "An intelligent high school student goes on a secret crusade to eliminate criminals from the world after discovering a notebook capable of killing anyone whose name is written into it.",
+      "Language": "Japanese, English",
+      "Country": "Japan",
+      "Awards": "2 wins & 1 nomination total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.9/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "8.9",
+      "imdbVotes": "407,332",
+      "imdbID": "tt0877057",
+      "Type": "series",
+      "totalSeasons": "1",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "c5b0",
+      "Title": "Kill Bill: Vol. 1",
+      "Year": "2003",
+      "Rated": "R",
+      "Released": "10 Oct 2003",
+      "Runtime": "111 min",
+      "Genre": "Action, Crime, Thriller",
+      "Director": "Quentin Tarantino",
+      "Writer": "Quentin Tarantino, Uma Thurman",
+      "Actors": "Uma Thurman, David Carradine, Daryl Hannah",
+      "Plot": "After waking from a four-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.",
+      "Language": "English, Japanese, French",
+      "Country": "United States, China",
+      "Awards": "Nominated for 5 BAFTA 30 wins & 103 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZmMyYzJlZmYtY2I3NC00NjAyLTkyZWItZjdjZDI1YTYyYTEwXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.2/10"
         },
         {
           "Source": "Rotten Tomatoes",
-          "Value": "34%"
+          "Value": "85%"
         },
         {
           "Source": "Metacritic",
-          "Value": "40/100"
+          "Value": "69/100"
         }
       ],
-      "Metascore": "40",
-      "imdbRating": "5.1",
-      "imdbVotes": "132,484",
-      "imdbID": "tt0362120",
+      "Metascore": "69",
+      "imdbRating": "8.2",
+      "imdbVotes": "1,240,375",
+      "imdbID": "tt0266697",
       "Type": "movie",
       "DVD": "N/A",
-      "BoxOffice": "$90,710,620",
+      "BoxOffice": "$70,099,045",
       "Production": "N/A",
       "Website": "N/A",
       "Response": "True",
-      "userId": "1d8e"
+      "userId": "2f58"
     },
     {
-      "id": "422c",
-      "Title": "Prom Night: An LGBT Short Film",
-      "Year": "2018",
-      "Rated": "Not Rated",
-      "Released": "03 Jun 2018",
-      "Runtime": "11 min",
-      "Genre": "Short, Drama",
-      "Director": "Jenna Larson, Marlena Damico",
-      "Writer": "Jenna Larson",
-      "Actors": "Jenna Larson, Tara DiNinno, Brian Redmon",
-      "Plot": "Callie, a closeted prom queen, has a big decision about her future on the night of her senior prom.",
-      "Language": "English",
-      "Country": "United States",
-      "Awards": "N/A",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BNGY0NmExZDMtZDQ1ZC00NjdmLTk5OGEtNzA1YzA1YTA3NzVmXkEyXkFqcGc@._V1_SX300.jpg",
-      "Ratings": [
-        {
-          "Source": "Internet Movie Database",
-          "Value": "7.5/10"
-        }
-      ],
-      "Metascore": "N/A",
-      "imdbRating": "7.5",
-      "imdbVotes": "85",
-      "imdbID": "tt8509746",
-      "Type": "movie",
-      "DVD": "N/A",
-      "BoxOffice": "N/A",
-      "Production": "N/A",
-      "Website": "N/A",
-      "Response": "True",
-      "userId": "1d8e"
-    },
-    {
-      "id": "e51e",
-      "Title": "Spider-Man: The Animated Series",
-      "Year": "1994–1998",
-      "Rated": "TV-Y7",
-      "Released": "19 Nov 1994",
-      "Runtime": "43S min",
-      "Genre": "Animation, Action, Adventure",
-      "Director": "N/A",
-      "Writer": "Stan Lee, Steve Ditko",
-      "Actors": "Christopher Daniel Barnes, Sara Ballantine, Edward Asner",
-      "Plot": "A young man with spider-like abilities fights crime as a superhero in New York City while trying to have a normal personal life.",
-      "Language": "English",
-      "Country": "United States",
-      "Awards": "4 nominations",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BYWRkN2M1NmQtZjhjMi00ODFjLTk2ODctYWJiOWNkNjg1OGY4XkEyXkFqcGc@._V1_SX300.jpg",
-      "Ratings": [
-        {
-          "Source": "Internet Movie Database",
-          "Value": "8.4/10"
-        }
-      ],
-      "Metascore": "N/A",
-      "imdbRating": "8.4",
-      "imdbVotes": "36,614",
-      "imdbID": "tt0112175",
-      "Type": "series",
-      "totalSeasons": "5",
-      "Response": "True",
-      "userId": "1d8e"
-    },
-    {
-      "id": "ff66",
-      "Title": "Night of the Living Dead 3D: Re-Animation",
-      "Year": "2012",
+      "id": "b0ca",
+      "Title": "Pulp Fiction",
+      "Year": "1994",
       "Rated": "R",
-      "Released": "16 Oct 2012",
-      "Runtime": "88 min",
-      "Genre": "Action, Comedy, Horror",
-      "Director": "Jeff Broadstreet",
-      "Writer": "Jeff Broadstreet, Robert Valding",
-      "Actors": "Andrew Divoff, Jeffrey Combs, Sarah Lieving",
-      "Plot": "After inheriting the family mortuary, a pyrophobic mortician accidentally exposes hundreds of un-cremated bodies to toxic medical waste. As the corpses re-animate, the mortician's inheritance-seeking younger brother unexpectantly ...",
-      "Language": "English",
+      "Released": "14 Oct 1994",
+      "Runtime": "154 min",
+      "Genre": "Crime, Drama",
+      "Director": "Quentin Tarantino",
+      "Writer": "Quentin Tarantino, Roger Avary",
+      "Actors": "John Travolta, Uma Thurman, Samuel L. Jackson",
+      "Plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "Language": "English, Spanish, French",
       "Country": "United States",
-      "Awards": "N/A",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BOTU5ODgyNTI1Nl5BMl5BanBnXkFtZTcwMjEwOTA0Nw@@._V1_SX300.jpg",
+      "Awards": "Won 1 Oscar. 69 wins & 72 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_SX300.jpg",
       "Ratings": [
         {
           "Source": "Internet Movie Database",
-          "Value": "3.0/10"
+          "Value": "8.9/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "92%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "95/100"
         }
       ],
-      "Metascore": "N/A",
-      "imdbRating": "3.0",
-      "imdbVotes": "2,165",
-      "imdbID": "tt1879012",
+      "Metascore": "95",
+      "imdbRating": "8.9",
+      "imdbVotes": "2,289,917",
+      "imdbID": "tt0110912",
       "Type": "movie",
       "DVD": "N/A",
-      "BoxOffice": "N/A",
+      "BoxOffice": "$107,928,762",
       "Production": "N/A",
       "Website": "N/A",
       "Response": "True",
-      "userId": "1d8e"
+      "userId": "2f58"
+    },
+    {
+      "id": "433e",
+      "Title": "Monsters, Inc.",
+      "Year": "2001",
+      "Rated": "G",
+      "Released": "23 Nov 2001",
+      "Runtime": "92 min",
+      "Genre": "Animation, Adventure, Comedy",
+      "Director": "Pete Docter, David Silverman, Lee Unkrich",
+      "Writer": "Pete Docter, Jill Culton, Jeff Pidgeon",
+      "Actors": "Billy Crystal, John Goodman, Mary Gibbs",
+      "Plot": "In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "Won 1 Oscar. 15 wins & 38 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTY1NTI0ODUyOF5BMl5BanBnXkFtZTgwNTEyNjQ0MDE@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.1/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "96%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "79/100"
+        }
+      ],
+      "Metascore": "79",
+      "imdbRating": "8.1",
+      "imdbVotes": "1,017,055",
+      "imdbID": "tt0198781",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$290,642,256",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "d479",
+      "Title": "The Lord of the Rings: The Fellowship of the Ring",
+      "Year": "2001",
+      "Rated": "PG-13",
+      "Released": "19 Dec 2001",
+      "Runtime": "178 min",
+      "Genre": "Adventure, Drama, Fantasy",
+      "Director": "Peter Jackson",
+      "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
+      "Actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
+      "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+      "Language": "English, Sindarin",
+      "Country": "New Zealand, United States, United Kingdom",
+      "Awards": "Won 4 Oscars. 125 wins & 126 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.9/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "92%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "92/100"
+        }
+      ],
+      "Metascore": "92",
+      "imdbRating": "8.9",
+      "imdbVotes": "2,082,432",
+      "imdbID": "tt0120737",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$319,372,078",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "5bff",
+      "Title": "The Lord of the Rings: The Rings of Power",
+      "Year": "2022–",
+      "Rated": "TV-14",
+      "Released": "01 Sep 2022",
+      "Runtime": "N/A",
+      "Genre": "Action, Adventure, Drama",
+      "Director": "N/A",
+      "Writer": "Patrick McKay, John D. Payne",
+      "Actors": "Morfydd Clark, Charlie Vickers, Charles Edwards",
+      "Plot": "Epic drama set thousands of years before the events of J.R.R. Tolkien's 'The Hobbit' and 'The Lord of the Rings' follows an ensemble cast of characters, both familiar and new, as they confront the long-feared re-emergence of evil ...",
+      "Language": "English, Sindarin",
+      "Country": "United States, New Zealand, Canada",
+      "Awards": "Nominated for 6 Primetime Emmys. 15 wins & 53 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNmVmZGQ2ZTctYzE4NC00YzkxLThhNjYtNGIyZjJmZGEwMjUzXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.9/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "6.9",
+      "imdbVotes": "412,163",
+      "imdbID": "tt7631058",
+      "Type": "series",
+      "totalSeasons": "3",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "46be",
+      "Title": "Taxi Driver",
+      "Year": "1976",
+      "Rated": "R",
+      "Released": "09 Feb 1976",
+      "Runtime": "114 min",
+      "Genre": "Crime, Drama",
+      "Director": "Martin Scorsese",
+      "Writer": "Paul Schrader",
+      "Actors": "Robert De Niro, Jodie Foster, Cybill Shepherd",
+      "Plot": "A mentally unstable veteran works as a nighttime taxi driver in New York City, where the perceived decadence and sleaze fuels his urge for violent action.",
+      "Language": "English, Spanish",
+      "Country": "United States",
+      "Awards": "Nominated for 4 Oscars. 22 wins & 21 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDNhMGYwM2UtMTdlZS00MGQ1LWI2YzAtODY5YWI1MjYyNzRmXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.2/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "89%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "94/100"
+        }
+      ],
+      "Metascore": "94",
+      "imdbRating": "8.2",
+      "imdbVotes": "959,151",
+      "imdbID": "tt0075314",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$28,262,574",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "0503",
+      "Title": "Nightcrawler",
+      "Year": "2014",
+      "Rated": "R",
+      "Released": "31 Oct 2014",
+      "Runtime": "117 min",
+      "Genre": "Crime, Drama, Thriller",
+      "Director": "Dan Gilroy",
+      "Writer": "Dan Gilroy",
+      "Actors": "Jake Gyllenhaal, Rene Russo, Bill Paxton",
+      "Plot": "A petty thief desperate for work muscles into the world of crime journalism and becomes the star of his own story as he blurs the line between observer and participant.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "Nominated for 1 Oscar. 44 wins & 126 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYjMwMmI5MWQtOTU4OS00OTAyLTg0OTYtNmQ5YzExZTQ3ZWJhXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.8/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "95%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "76/100"
+        }
+      ],
+      "Metascore": "76",
+      "imdbRating": "7.8",
+      "imdbVotes": "626,794",
+      "imdbID": "tt2872718",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$32,381,217",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "9ef0",
+      "Title": "The Sopranos",
+      "Year": "1999–2007",
+      "Rated": "TV-MA",
+      "Released": "10 Jan 1999",
+      "Runtime": "55 min",
+      "Genre": "Crime, Drama",
+      "Director": "N/A",
+      "Writer": "David Chase",
+      "Actors": "James Gandolfini, Lorraine Bracco, Edie Falco",
+      "Plot": "New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.",
+      "Language": "English, Italian, Russian",
+      "Country": "United States",
+      "Awards": "Won 21 Primetime Emmys. 126 wins & 312 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjRmMTNiMTQtMDg1ZS00MGM1LWE1MGUtYjEzMGFjNWUzOWRkXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "9.2/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "9.2",
+      "imdbVotes": "506,576",
+      "imdbID": "tt0141842",
+      "Type": "series",
+      "totalSeasons": "6",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "09b0",
+      "Title": "Nocturnal Animals",
+      "Year": "2016",
+      "Rated": "R",
+      "Released": "09 Dec 2016",
+      "Runtime": "116 min",
+      "Genre": "Drama, Thriller",
+      "Director": "Tom Ford",
+      "Writer": "Tom Ford, Austin Wright",
+      "Actors": "Amy Adams, Jake Gyllenhaal, Michael Shannon",
+      "Plot": "A wealthy art gallery owner is haunted by her ex-husband's novel, a violent thriller she interprets as a symbolic revenge tale.",
+      "Language": "English",
+      "Country": "United States, China",
+      "Awards": "Nominated for 1 Oscar. 21 wins & 153 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwMzMwMzgxNl5BMl5BanBnXkFtZTgwMTA0MTUzMDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.4/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "74%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "67/100"
+        }
+      ],
+      "Metascore": "67",
+      "imdbRating": "7.4",
+      "imdbVotes": "326,318",
+      "imdbID": "tt4550098",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$10,663,357",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "baf7",
+      "Title": "Arrival",
+      "Year": "2016",
+      "Rated": "PG-13",
+      "Released": "11 Nov 2016",
+      "Runtime": "116 min",
+      "Genre": "Drama, Mystery, Sci-Fi",
+      "Director": "Denis Villeneuve",
+      "Writer": "Eric Heisserer, Ted Chiang",
+      "Actors": "Amy Adams, Jeremy Renner, Forest Whitaker",
+      "Plot": "Linguist Louise Banks leads a team of investigators when gigantic spaceships touch down around the world. As nations teeter on the verge of global war, Banks and her crew must find a way to communicate with the extraterrestrial vi...",
+      "Language": "English, Mandarin, Russian",
+      "Country": "United States, Canada",
+      "Awards": "Won 1 Oscar. 71 wins & 268 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.9/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "94%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "81/100"
+        }
+      ],
+      "Metascore": "81",
+      "imdbRating": "7.9",
+      "imdbVotes": "804,201",
+      "imdbID": "tt2543164",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$100,546,139",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "4821",
+      "Title": "Daredevil",
+      "Year": "2015–2018",
+      "Rated": "TV-MA",
+      "Released": "10 Apr 2015",
+      "Runtime": "54 min",
+      "Genre": "Action, Crime, Drama",
+      "Director": "N/A",
+      "Writer": "Drew Goddard",
+      "Actors": "Charlie Cox, Vincent D'Onofrio, Deborah Ann Woll",
+      "Plot": "A blind lawyer by day, vigilante by night. Matt Murdock fights the crime of New York as Daredevil.",
+      "Language": "English, Spanish, Mandarin, Japanese, Russian",
+      "Country": "United States",
+      "Awards": "Nominated for 5 Primetime Emmys. 10 wins & 43 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BODcwOTg2MDE3NF5BMl5BanBnXkFtZTgwNTUyNTY1NjM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.6/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "8.6",
+      "imdbVotes": "494,251",
+      "imdbID": "tt3322312",
+      "Type": "series",
+      "totalSeasons": "3",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "e554",
+      "Title": "Fight Club",
+      "Year": "1999",
+      "Rated": "R",
+      "Released": "15 Oct 1999",
+      "Runtime": "139 min",
+      "Genre": "Drama",
+      "Director": "David Fincher",
+      "Writer": "Chuck Palahniuk, Jim Uhls",
+      "Actors": "Brad Pitt, Edward Norton, Meat Loaf",
+      "Plot": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+      "Language": "English",
+      "Country": "Germany, United States",
+      "Awards": "Nominated for 1 Oscar. 12 wins & 38 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.8/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "81%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "67/100"
+        }
+      ],
+      "Metascore": "67",
+      "imdbRating": "8.8",
+      "imdbVotes": "2,409,361",
+      "imdbID": "tt0137523",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$37,030,102",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "a19b",
+      "Title": "Interstellar",
+      "Year": "2014",
+      "Rated": "PG-13",
+      "Released": "07 Nov 2014",
+      "Runtime": "169 min",
+      "Genre": "Adventure, Drama, Sci-Fi",
+      "Director": "Christopher Nolan",
+      "Writer": "Jonathan Nolan, Christopher Nolan",
+      "Actors": "Matthew McConaughey, Anne Hathaway, Jessica Chastain",
+      "Plot": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+      "Language": "English",
+      "Country": "United States, United Kingdom, Canada",
+      "Awards": "Won 1 Oscar. 44 wins & 148 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.7/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "73%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "74/100"
+        }
+      ],
+      "Metascore": "74",
+      "imdbRating": "8.7",
+      "imdbVotes": "2,259,078",
+      "imdbID": "tt0816692",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$203,227,580",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "2f58"
+    },
+    {
+      "id": "0c89",
+      "Title": "A Beautiful Mind",
+      "Year": "2001",
+      "Rated": "PG-13",
+      "Released": "04 Jan 2002",
+      "Runtime": "135 min",
+      "Genre": "Biography, Drama, Mystery",
+      "Director": "Ron Howard",
+      "Writer": "Akiva Goldsman, Sylvia Nasar",
+      "Actors": "Russell Crowe, Ed Harris, Jennifer Connelly",
+      "Plot": "A mathematical genius, John Nash made an astonishing discovery early in his career and stood on the brink of international acclaim. But the handsome and arrogant Nash soon found himself on a harrowing journey of self-discovery.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "Won 4 Oscars. 37 wins & 69 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNzljZTk5ZDgtZTQ1Zi00NTM4LThlOGUtZDk2MGM4NDQ4NWQyXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.2/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "74%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "72/100"
+        }
+      ],
+      "Metascore": "72",
+      "imdbRating": "8.2",
+      "imdbVotes": "1,012,949",
+      "imdbID": "tt0268978",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$170,742,341",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "userId": "2f58"
     }
   ],
   "reviews": [
@@ -419,6 +1007,13 @@
       "nickname": "dasd",
       "movieId": "tt0175142",
       "reviewText": "asdsagas"
+    },
+    {
+      "id": "75ae",
+      "userId": "2f58",
+      "nickname": "Anderson",
+      "movieId": "tt0175142",
+      "reviewText": "Perfect"
     }
   ]
 }

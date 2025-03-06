@@ -1,12 +1,11 @@
 <div class="profile-container">
   <h2>My Profile</h2>
 
-  <!-- Ошибка -->
+
   @if (errorMessage()) {
     <p class="error">{{ errorMessage() }}</p>
   }
 
-  <!-- Форма профиля -->
   <form [formGroup]="profileForm">
     <label for="fullName">Full Name</label>
     <input
@@ -36,7 +35,6 @@
 
   <h3>Change Password</h3>
 
-  <!-- Форма смены пароля -->
   <form [formGroup]="passwordForm">
     <label for="currentPassword">Current Password</label>
     <input
