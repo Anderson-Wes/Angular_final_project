@@ -11,19 +11,18 @@
   }
 
   .no-movies {
-
     color: #999;
     text-align: center;
   }
 
   .movies-list {
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
     padding: 0 60px;
     flex-wrap: wrap;
     gap: 20px;
     margin: 0 auto;
-
+    justify-content: center;
   }
 
   .pagination {
