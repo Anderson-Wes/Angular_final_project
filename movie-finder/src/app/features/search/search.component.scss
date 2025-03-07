@@ -21,7 +21,6 @@
     align-items: center;
     gap: 12px;
 
-    /* Поле ввода */
     input[type="text"] {
       width: 800px;
       max-width: 80%;
@@ -41,7 +40,6 @@
       }
     }
 
-    /* Кнопка поиска */
     .search-btn {
       padding: 12px 24px;
       font-size: 16px;
@@ -62,10 +60,38 @@
 
 .movies-list {
   display: flex;
-  margin: 0 auto;
-  max-width: 1200px;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 0 0 50px 0;
   justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Grid layout to display 5 movies per row */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 movies per row */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .movies-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 movies per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .movies-grid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 movies per row on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 movies per row on mobile */
+  }
 }

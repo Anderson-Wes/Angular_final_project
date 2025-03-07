@@ -7,14 +7,21 @@
         [formControl]="searchControl"
         placeholder="Search for a movie..."
       />
-      <button class="search-btn">Search</button>
+      <button class="search-btn" (click)="performSearch()">Search</button>
     </div>
-    
   </div>
 
   <div class="movies-list">
-    @if (movies()) { @for (movie of movies()?.Search; track movie) {
-    <app-movie-card [movie]="movie"></app-movie-card>
-    } }
+    @if (isSearching()) {
+    <p class="loading-text">Searching for movies...</p>
+    } @else if (hasSearched() && movies().length === 0) {
+    <p class="no-movies">No movies found.</p>
+    } @else {
+    <div class="movies-grid">
+      @for (movie of movies(); track movie) {
+      <app-movie-card [movie]="movie"></app-movie-card>
+      }
+    </div>
+    }
   </div>
 </div>
