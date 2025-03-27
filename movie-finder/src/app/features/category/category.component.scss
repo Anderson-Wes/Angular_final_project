@@ -31,6 +31,7 @@
     gap: 8px;
     padding: 50px 0;
     justify-content: center;
+    flex-wrap: wrap;
 
     .page-btn {
       color: #818181;
@@ -75,6 +76,34 @@
       margin-left: 16px;
       color: #666;
       font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      gap: 6px;
+
+      .page-btn {
+        padding: 6px 10px;
+        font-size: 14px;
+      }
+
+      .page-info {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-btn {
+        padding: 5px 8px;
+        font-size: 13px;
+      }
+
+      .dots {
+        padding: 5px 8px;
+        font-size: 13px;
+      }
     }
   }
 }

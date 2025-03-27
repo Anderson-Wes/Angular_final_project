@@ -9,7 +9,6 @@
   flex-wrap: wrap;
   gap: 20px;
 
-
   .logo-singup {
     display: flex;
     align-items: center;
@@ -18,14 +17,20 @@
     width: 100%;
     justify-content: space-between;
 
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .logo {
+      width: 121px;
       img {
         height: 20px;
         cursor: pointer;
         transition: filter 0.05s ease-in-out;
         margin-right: 4px;
       }
-  
+
       &:hover img {
         filter: brightness(0) invert(1);
       }
@@ -46,7 +51,6 @@
       text-align: center;
       transition: 0.3s;
       padding: 10px 0;
-
 
       &:hover {
         color: #ff5c5c;

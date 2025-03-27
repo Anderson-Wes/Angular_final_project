@@ -1,8 +1,12 @@
 <a [routerLink]="['/movie', movie.imdbID]" class="movie-card">
-  <img [src]="movie.Poster !== 'N/A' ? movie.Poster : 'assets/img/default-poster.png'" [alt]="movie.Title" />
+  <img
+    [src]="
+      movie.Poster !== 'N/A' ? movie.Poster : 'assets/img/default-poster.png'
+    "
+    [alt]="movie.Title"
+  />
   <div class="description">
     <h3>{{ movie.Title }}</h3>
     <p class="year">{{ movie.Year }}</p>
   </div>
 </a>
-

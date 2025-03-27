@@ -7,6 +7,7 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
+
 import { MovieService } from '../../core/services/movie.service';
 import { AuthService } from '../../core/services/auth.service';
 import { IMovieDetails } from '../../shared/interfaces/interfaces';
@@ -24,28 +25,35 @@ export class MovieDetailsComponent {
   public authService = inject(AuthService);
   private fb = inject(FormBuilder);
 
+  // Signals
   movie = signal<IMovieDetails | null>(null);
   reviews = signal<any[]>([]);
   isLoading = signal<boolean>(true);
-  isFavorite = signal<boolean>(false);
+  isFavorite = signal<boolean>(false); // Whether movie is in user's favorites
 
+  // Reactive form for submitting reviews
   reviewForm = this.fb.group({
     reviewText: ['', [Validators.required, Validators.minLength(5)]],
   });
 
   constructor() {
+    // Run this effect once component is created
     effect(() => {
-      const id = this.route.snapshot.paramMap.get('id');
-      const user = this.authService.getCurrentUser();
-      if (id) {
-        this.movieService.getMovieDetails(id).subscribe((data) => {
-          this.movie.set(data);
-          this.isLoading.set(false);
+      const id = this.route.snapshot.paramMap.get('id'); // Get movie ID from URL
+      const user = this.authService.getCurrentUser(); // Get current user
 
+      if (id) {
+        // Fetch movie details
+        this.movieService.getMovieDetails(id).subscribe((data) => {
+          this.movie.set(data); // Save movie data
+          this.isLoading.set(false); // Turn off loading indicator
+
+          // Fetch reviews for this movie
           this.movieService.getReviews(id).subscribe((reviews) => {
             this.reviews.set(reviews);
           });
 
+          // If user is logged in, check if this movie is already in favorites
           if (user) {
             this.movieService.getFavorites(user.id!).subscribe((favorites) => {
               this.isFavorite.set(favorites.some((fav) => fav.imdbID === id));
@@ -56,17 +64,20 @@ export class MovieDetailsComponent {
     });
   }
 
+  // Toggle movie as favorite / unfavorite
   toggleFavorite() {
     const user = this.authService.getCurrentUser();
     if (!user || !this.movie()) return;
 
     if (this.isFavorite()) {
+      // Remove from favorites
       this.movieService
         .removeFromFavorites(user.id!, this.movie()!.imdbID)
         .subscribe(() => {
           this.isFavorite.set(false);
         });
     } else {
+      // Add to favorites
       this.movieService
         .addToFavorites(user.id!, this.movie()!)
         .subscribe(() => {
@@ -75,6 +86,7 @@ export class MovieDetailsComponent {
     }
   }
 
+  // Open YouTube trailer search for this movie
   openTrailer(title: string) {
     const query = `${title} trailer`;
     const youtubeUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(
@@ -83,6 +95,7 @@ export class MovieDetailsComponent {
     window.open(youtubeUrl, '_blank');
   }
 
+  // Submit a new review
   submitReview() {
     const user = this.authService.getCurrentUser();
     if (!user) return;
@@ -102,15 +115,17 @@ export class MovieDetailsComponent {
         newReview.reviewText
       )
       .subscribe((review) => {
-        this.reviews.set([...this.reviews(), review]);
-        this.reviewForm.reset();
+        this.reviews.set([...this.reviews(), review]); // Add new review to list
+        this.reviewForm.reset(); // Clear form
       });
   }
 
+  // Allow a user to delete only their own review
   deleteReview(reviewId: number, userId: number) {
     const user = this.authService.getCurrentUser();
     if (user && user.id === userId) {
       this.movieService.deleteReview(reviewId).subscribe(() => {
+        // Remove review from local signal
         this.reviews.set(this.reviews().filter((r) => r.id !== reviewId));
       });
     }

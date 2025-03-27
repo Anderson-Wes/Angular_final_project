@@ -6,15 +6,17 @@ import { AuthService } from '../services/auth.service';
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  private authService = inject(AuthService);
-  private router = inject(Router);
+  private authService = inject(AuthService); // used to check if user is logged in
+  private router = inject(Router); // used to programmatically navigate
 
   canActivate(): boolean {
-    const user = this.authService.getCurrentUser();
+    const user = this.authService.getCurrentUser(); // Get the current user
+
+    // If no user is logged in, redirect to login page
     if (!user) {
       this.router.navigate(['/login']);
-      return false;
+      return false; // Block access to the protected route
     }
-    return true;
+    return true; // Allow access if user exists
   }
 }

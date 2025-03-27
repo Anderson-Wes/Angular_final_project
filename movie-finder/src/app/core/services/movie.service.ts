@@ -12,9 +12,11 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root',
 })
 export class MovieService {
+  // OMDb API endpoint and API key
   private readonly apiUrl = environment.omdbApiUrl;
   private readonly apiKey = environment.omdbApiKey;
 
+  // Local json-server
   private readonly baseJsonUrl = environment.apiBaseUrl;
   private readonly favoritesUrl = `${this.baseJsonUrl}/favorites`;
   private readonly reviewsUrl = `${this.baseJsonUrl}/reviews`;

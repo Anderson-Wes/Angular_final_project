@@ -9,14 +9,23 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
 
     a {
       color: #848b8e;
       font-size: 16px;
       transition: color 0.3s ease-in-out;
 
-      &:hover {
+      &:hover,
+      &.active {
         color: #ff5c5c;
+        font-weight: bold;
       }
     }
   }

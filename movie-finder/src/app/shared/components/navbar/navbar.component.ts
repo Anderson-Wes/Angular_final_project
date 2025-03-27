@@ -12,16 +12,20 @@ import { AuthService } from '../../../core/services/auth.service';
 })
 export class NavbarComponent {
   public authService: AuthService;
+
+  // Signal to manage the state of the dropdown (visible or hidden)
   isDropdownOpen = signal<boolean>(false);
 
   constructor(authService: AuthService) {
     this.authService = authService;
   }
 
+  // Toggles the dropdown menu (used on hover)
   toggleDropdown() {
     this.isDropdownOpen.set(!this.isDropdownOpen());
   }
 
+  // Logout function calls the authService method
   logout() {
     this.authService.logout();
   }

@@ -1,9 +1,8 @@
 <div class="profile-container">
   <h2>My Profile</h2>
 
-
   @if (errorMessage()) {
-    <p class="error">{{ errorMessage() }}</p>
+  <p class="error">{{ errorMessage() }}</p>
   }
 
   <form [formGroup]="profileForm">
@@ -24,12 +23,12 @@
     />
 
     @if (isEditing()) {
-      <div class="change-buttons">
-        <button type="button" (click)="saveProfileChanges()">Save Changes</button>
-        <button type="button" (click)="toggleEdit()">Cancel</button>
-      </div>
+    <div class="change-buttons">
+      <button type="button" (click)="saveProfileChanges()">Save Changes</button>
+      <button type="button" (click)="toggleEdit()">Cancel</button>
+    </div>
     } @else {
-      <button type="button" (click)="toggleEdit()">Edit Profile</button>
+    <button type="button" (click)="toggleEdit()">Edit Profile</button>
     }
   </form>
 
@@ -46,19 +45,22 @@
     <label for="newPassword">New Password</label>
     <input id="newPassword" type="password" formControlName="newPassword" />
     @if (passwordForm.controls.newPassword.invalid &&
-         passwordForm.controls.newPassword.touched) {
-      <p class="error">
-        Password must be at least 8 characters long, include a digit and an uppercase letter.
-      </p>
+    passwordForm.controls.newPassword.touched) {
+    <p class="error">
+      Password must be at least 8 characters long, include a digit and an
+      uppercase letter.
+    </p>
     }
 
     <label for="confirmPassword">Confirm New Password</label>
-    <input id="confirmPassword" type="password" formControlName="confirmPassword" />
-    @if (passwordForm.value.newPassword !== passwordForm.value.confirmPassword &&
-         passwordForm.controls.confirmPassword.touched) {
-      <p class="error">
-        Passwords must match
-      </p>
+    <input
+      id="confirmPassword"
+      type="password"
+      formControlName="confirmPassword"
+    />
+    @if (passwordForm.value.newPassword !== passwordForm.value.confirmPassword
+    && passwordForm.controls.confirmPassword.touched) {
+    <p class="error">Passwords must match</p>
     }
 
     <button type="button" (click)="changePassword()">Change Password</button>
