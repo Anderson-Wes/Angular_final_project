@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>David Bosikov — QA Portfolio (Movie Finder)</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                line-height: 1.5;
+            }
+            header {
+                background: #0f172a;
+                color: #fff;
+                padding: 24px;
+            }
+            header h1 {
+                margin: 0;
+                font-size: 24px;
+            }
+            header p {
+                margin: 6px 0 0;
+                opacity: 0.9;
+            }
+            main {
+                padding: 24px;
+                max-width: 1100px;
+                margin: auto;
+            }
+            .links a {
+                margin-right: 14px;
+            }
+            .card {
+                background: #fff;
+                border: 1px solid #e5e7eb;
+                border-radius: 12px;
+                padding: 16px;
+                margin-bottom: 18px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            }
+            h2 {
+                margin-top: 0;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                border: 1px solid #e5e7eb;
+                padding: 8px;
+                vertical-align: top;
+            }
+            th {
+                background: #f8fafc;
+                text-align: left;
+            }
+            .meta {
+                font-size: 12px;
+                color: #64748b;
+            }
+            .filter {
+                display: flex;
+                gap: 8px;
+                margin-bottom: 10px;
+                flex-wrap: wrap;
+            }
+            .filter input,
+            .filter select {
+                padding: 6px 8px;
+                border-radius: 8px;
+                border: 1px solid #cbd5e1;
+            }
+            footer {
+                padding: 16px 24px;
+                background: #f8fafc;
+                color: #475569;
+            }
+            .badge {
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 999px;
+                background: #e2e8f0;
+                font-size: 12px;
+            }
+            @media (max-width: 640px) {
+                table,
+                thead,
+                tbody,
+                th,
+                td,
+                tr {
+                    display: block;
+                }
+                th {
+                    position: absolute;
+                    left: -9999px;
+                    top: -9999px;
+                }
+                td {
+                    border: none;
+                    position: relative;
+                    padding-left: 50%;
+                }
+                td::before {
+                    position: absolute;
+                    top: 8px;
+                    left: 8px;
+                    width: 45%;
+                    white-space: nowrap;
+                    font-weight: bold;
+                    color: #475569;
+                }
+                td:nth-of-type(1)::before {
+                    content: "ID";
+                }
+                td:nth-of-type(2)::before {
+                    content: "Module";
+                }
+                td:nth-of-type(3)::before {
+                    content: "Title";
+                }
+                td:nth-of-type(4)::before {
+                    content: "Steps";
+                }
+                td:nth-of-type(5)::before {
+                    content: "Data";
+                }
+                td:nth-of-type(6)::before {
+                    content: "Expected";
+                }
+                td:nth-of-type(7)::before {
+                    content: "Priority";
+                }
+                td:nth-of-type(8)::before {
+                    content: "Status";
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>David Bosikov — QA Portfolio</h1>
+            <p class="meta">
+                Project: Movie Finder • Last updated: 2025-08-09 07:23:03 UTC
+            </p>
+        </header>
+        <main>
+            <div class="card">
+                <h2>About the Project</h2>
+                <p>
+                    Self-developed Angular + TypeScript web application for
+                    discovering movies, featuring search, favorites, user
+                    profile, and reviews.
+                </p>
+                <p class="links">
+                    <a
+                        href="https://anderson-wes.github.io/Angular_final_project"
+                        target="_blank"
+                        rel="noopener"
+                        >Live Demo</a
+                    >
+                    <a
+                        href="https://github.com/Anderson-Wes/Angular_final_project"
+                        target="_blank"
+                        rel="noopener"
+                        >Repository</a
+                    >
+                </p>
+                <p>
+                    <span class="badge">20+ Test Cases</span>
+                    <span class="badge">15 Bug Reports</span>
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Test Design & Coverage</h2>
+                <ul>
+                    <li>Functional, Regression, Smoke, and UI testing.</li>
+                    <li>
+                        Techniques: Equivalence Partitioning, Boundary Value
+                        Analysis, Pairwise Testing.
+                    </li>
+                    <li>
+                        APIs: OMDb API calls validated via status codes and JSON
+                        schema checks.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Test Cases</h2>
+                <div class="filter">
+                    <input
+                        id="tcSearch"
+                        type="text"
+                        placeholder="Filter by keyword…"
+                    />
+                    <select id="tcModule">
+                        <option value="">All Modules</option>
+                        <option>Search</option>
+                        <option>Favorites</option>
+                        <option>Profile</option>
+                        <option>Reviews</option>
+                        <option>UI/Responsive</option>
+                        <option>Accessibility</option>
+                        <option>API</option>
+                    </select>
+                    <select id="tcPriority">
+                        <option value="">All Priorities</option>
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
+                    </select>
+                </div>
+                <table id="tcTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Module</th>
+                            <th>Title</th>
+                            <th>Steps</th>
+                            <th>Data</th>
+                            <th>Expected</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TC-001</td>
+                            <td>Search</td>
+                            <td>Search by valid movie title</td>
+                            <td>
+                                1) Open app 2) Enter 'Inception' 3) Click Search
+                            </td>
+                            <td>Inception</td>
+                            <td>
+                                Results list contains 'Inception' with details
+                            </td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-002</td>
+                            <td>Search</td>
+                            <td>Search by partial title</td>
+                            <td>1) Open app 2) Enter 'inc' 3) Click Search</td>
+                            <td>inc</td>
+                            <td>Results include titles containing 'inc'</td>
+                            <td>Medium</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-003</td>
+                            <td>Search</td>
+                            <td>Search by year filter (if present)</td>
+                            <td>
+                                1) Open app 2) Enter 'Matrix' 3) Set Year=1999
+                                4) Search
+                            </td>
+                            <td>Matrix, Year=1999</td>
+                            <td>Shows movies from 1999 only</td>
+                            <td>Medium</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-004</td>
+                            <td>Search</td>
+                            <td>Search with invalid symbols</td>
+                            <td>1) Open app 2) Enter '!@#$' 3) Click Search</td>
+                            <td>!@#$</td>
+                            <td>'No results' message is displayed</td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-005</td>
+                            <td>Search</td>
+                            <td>Search with leading/trailing spaces</td>
+                            <td>1) Enter ' Matrix ' 2) Click Search</td>
+                            <td>Matrix</td>
+                            <td>Trims spaces; results show 'Matrix'</td>
+                            <td>Low</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-006</td>
+                            <td>Search</td>
+                            <td>Empty search submission</td>
+                            <td>1) Leave search empty 2) Click Search</td>
+                            <td></td>
+                            <td>
+                                Validation message 'Please enter a query' (or
+                                disables search)
+                            </td>
+                            <td>Medium</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-007</td>
+                            <td>Favorites</td>
+                            <td>Add movie to favorites</td>
+                            <td>
+                                1) Search 'Matrix' 2) Click 'Add to Favorites'
+                                3) Open Favorites
+                            </td>
+                            <td>Matrix</td>
+                            <td>Movie appears in Favorites list</td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-008</td>
+                            <td>Favorites</td>
+                            <td>Prevent duplicate movie in favorites</td>
+                            <td>1) Add 'Matrix' twice 2) Open Favorites</td>
+                            <td>Matrix</td>
+                            <td>Movie appears only once</td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-009</td>
+                            <td>Favorites</td>
+                            <td>Remove movie from favorites</td>
+                            <td>1) Add 'Matrix' 2) Remove it from Favorites</td>
+                            <td>Matrix</td>
+                            <td>Movie disappears from Favorites list</td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-010</td>
+                            <td>Favorites</td>
+                            <td>Favorites persistence after reload</td>
+                            <td>
+                                1) Add movie 2) Reload the page 3) Open
+                                Favorites
+                            </td>
+                            <td>Any movie</td>
+                            <td>Favorites are persisted (per project rules)</td>
+                            <td>Medium</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-011</td>
+                            <td>Profile</td>
+                            <td>Update profile with valid email</td>
+                            <td>
+                                1) Go to Profile 2) Change email to
+                                'user@example.com' 3) Save
+                            </td>
+                            <td>user@example.com</td>
+                            <td>Profile is saved; toast/notification shown</td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-012</td>
+                            <td>Profile</td>
+                            <td>Update profile with invalid email</td>
+                            <td>
+                                1) Go to Profile 2) Enter 'abc' as email 3) Save
+                            </td>
+                            <td>abc</td>
+                            <td>Validation error message under email field</td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-013</td>
+                            <td>Profile</td>
+                            <td>Email uniqueness validation</td>
+                            <td>
+                                1) Set email to an existing user's email 2) Save
+                            </td>
+                            <td>existing@example.com</td>
+                            <td>Error 'Email already exists'</td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-014</td>
+                            <td>Profile</td>
+                            <td>Update full name with boundary values</td>
+                            <td>
+                                1) Set name to 1 char 2) Save 3) Set to 100
+                                chars 4) Save
+                            </td>
+                            <td>length=1 and length=100</td>
+                            <td>
+                                1-char rejected (if rule); 100-char accepted if
+                                within limit
+                            </td>
+                            <td>Medium</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-015</td>
+                            <td>Reviews</td>
+                            <td>Add review with valid input</td>
+                            <td>
+                                1) Open movie details 2) Add review text 3)
+                                Submit
+                            </td>
+                            <td>'Great movie!'</td>
+                            <td>
+                                Review appears under movie with nickname and
+                                time
+                            </td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-016</td>
+                            <td>Reviews</td>
+                            <td>Delete own review</td>
+                            <td>
+                                1) Add review 2) Click 'Delete' on that review
+                            </td>
+                            <td>Any review</td>
+                            <td>Review is removed (only author can delete)</td>
+                            <td>Medium</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-017</td>
+                            <td>Reviews</td>
+                            <td>Review text length boundaries</td>
+                            <td>
+                                1) Try to submit empty 2) Try 1 char 3) Try max
+                                allowed length + 1
+                            </td>
+                            <td>'', 'a', 'a'*(max+1)</td>
+                            <td>
+                                Empty rejected; 1 char per rule; overflow
+                                blocked
+                            </td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-018</td>
+                            <td>Search</td>
+                            <td>Network error handling</td>
+                            <td>
+                                1) Simulate network error (disconnect) 2)
+                                Perform search
+                            </td>
+                            <td>Any</td>
+                            <td>User-friendly error message; no crash</td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-019</td>
+                            <td>UI/Responsive</td>
+                            <td>Responsive layout on mobile width</td>
+                            <td>
+                                1) Set viewport to 375x667 2) Navigate across
+                                pages
+                            </td>
+                            <td>N/A</td>
+                            <td>Layout adapts; no overlaps or clipped text</td>
+                            <td>Medium</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-020</td>
+                            <td>Accessibility</td>
+                            <td>Keyboard navigation basics</td>
+                            <td>
+                                1) Use Tab/Shift+Tab to navigate 2) Activate
+                                buttons via Enter/Space
+                            </td>
+                            <td>N/A</td>
+                            <td>
+                                Focusable controls; expected keyboard behavior
+                            </td>
+                            <td>Low</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-021</td>
+                            <td>API</td>
+                            <td>OMDb API valid request</td>
+                            <td>
+                                1) Trigger a search that calls OMDb 2) Inspect
+                                network/console
+                            </td>
+                            <td>Valid keyword</td>
+                            <td>200 OK; JSON schema matches expected keys</td>
+                            <td>High</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-022</td>
+                            <td>API</td>
+                            <td>OMDb API invalid key / rate limit</td>
+                            <td>
+                                1) Use invalid API key or trigger rate limit 2)
+                                Observe handling
+                            </td>
+                            <td>Invalid key / many requests</td>
+                            <td>Handled error; user-friendly message</td>
+                            <td>Medium</td>
+                            <td>Pass</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Bug Reports</h2>
+                <div class="filter">
+                    <input
+                        id="brSearch"
+                        type="text"
+                        placeholder="Filter by keyword…"
+                    />
+                    <select id="brModule">
+                        <option value="">All Modules</option>
+                        <option>Search</option>
+                        <option>Favorites</option>
+                        <option>Reviews</option>
+                        <option>Profile</option>
+                        <option>UI</option>
+                        <option>Auth/UI</option>
+                        <option>Responsive</option>
+                        <option>Performance</option>
+                        <option>API</option>
+                        <option>Security</option>
+                    </select>
+                    <select id="brSeverity">
+                        <option value="">All Severities</option>
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
+                    </select>
+                    <select id="brStatus">
+                        <option value="">All Statuses</option>
+                        <option>Open</option>
+                        <option>Fixed</option>
+                    </select>
+                </div>
+                <table id="brTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Module</th>
+                            <th>Severity</th>
+                            <th>Title</th>
+                            <th>Steps</th>
+                            <th>Expected</th>
+                            <th>Actual</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BR-001</td>
+                            <td>Search</td>
+                            <td>Medium</td>
+                            <td>
+                                Blank results without message on whitespace
+                                query
+                            </td>
+                            <td>
+                                1) Enter single space in search 2) Click Search
+                            </td>
+                            <td>'No results' helper message displayed</td>
+                            <td>Blank list, no helper text</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-002</td>
+                            <td>Favorites</td>
+                            <td>High</td>
+                            <td>Duplicate entries appear in Favorites</td>
+                            <td>1) Add same movie twice 2) Open Favorites</td>
+                            <td>Single entry only</td>
+                            <td>Two identical entries displayed</td>
+                            <td>Fixed</td>
+                        </tr>
+                        <tr>
+                            <td>BR-003</td>
+                            <td>Reviews</td>
+                            <td>Low</td>
+                            <td>No truncation for long review >200 chars</td>
+                            <td>1) Submit review with >200 chars</td>
+                            <td>
+                                Either truncated or UI wraps gracefully per spec
+                            </td>
+                            <td>
+                                Saved without truncation; UI overflows on small
+                                screens
+                            </td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-004</td>
+                            <td>Profile</td>
+                            <td>Medium</td>
+                            <td>Missing uniqueness validation for email</td>
+                            <td>1) Change email to existing user's 2) Save</td>
+                            <td>Validation error 'Email already exists'</td>
+                            <td>Saved without error</td>
+                            <td>Fixed</td>
+                        </tr>
+                        <tr>
+                            <td>BR-005</td>
+                            <td>Search</td>
+                            <td>Low</td>
+                            <td>Search button not disabled on empty input</td>
+                            <td>
+                                1) Leave input empty 2) Observe search button
+                                state
+                            </td>
+                            <td>Button disabled or inline validation shown</td>
+                            <td>Button enabled; results page flashes</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-006</td>
+                            <td>UI</td>
+                            <td>Low</td>
+                            <td>
+                                Minor misalignment in movie cards on 320px width
+                            </td>
+                            <td>1) Set viewport to 320px 2) Open home page</td>
+                            <td>Cards align in one column</td>
+                            <td>Card image overlaps title by 2-4px</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-007</td>
+                            <td>Favorites</td>
+                            <td>Medium</td>
+                            <td>
+                                Remove from Favorites not reflected immediately
+                            </td>
+                            <td>1) Remove a movie 2) Navigate back</td>
+                            <td>Favorites list updated immediately</td>
+                            <td>Stale item persists until manual reload</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-008</td>
+                            <td>Reviews</td>
+                            <td>Medium</td>
+                            <td>
+                                User can delete someone else's review in rare
+                                state
+                            </td>
+                            <td>
+                                1) Open movie details 2) Switch accounts quickly
+                                3) Try delete
+                            </td>
+                            <td>Only author can delete</td>
+                            <td>Delete action available in edge timing</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-009</td>
+                            <td>Profile</td>
+                            <td>Low</td>
+                            <td>Profile save toast missing success icon</td>
+                            <td>1) Update profile 2) Observe toast</td>
+                            <td>Success icon appears</td>
+                            <td>Text only, no icon</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-010</td>
+                            <td>API</td>
+                            <td>High</td>
+                            <td>No graceful handling of OMDb rate limit</td>
+                            <td>1) Trigger many requests quickly</td>
+                            <td>Clear error message and retry hint</td>
+                            <td>Generic error; UI spinner keeps spinning</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-011</td>
+                            <td>Search</td>
+                            <td>Medium</td>
+                            <td>
+                                Case sensitivity inconsistency in search filter
+                            </td>
+                            <td>1) Search 'matrix' vs 'Matrix'</td>
+                            <td>Same results regardless of case</td>
+                            <td>Different order/quantity</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-012</td>
+                            <td>Auth/UI</td>
+                            <td>Low</td>
+                            <td>
+                                Focus not returned to search input after modal
+                                close
+                            </td>
+                            <td>1) Open details modal 2) Close it</td>
+                            <td>
+                                Focus returns to prior element for accessibility
+                            </td>
+                            <td>Focus lost to body</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-013</td>
+                            <td>Responsive</td>
+                            <td>Low</td>
+                            <td>Footer overlaps content at 568px height</td>
+                            <td>1) Set viewport height 568px 2) Scroll</td>
+                            <td>No overlap</td>
+                            <td>Footer overlaps last card by ~12px</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-014</td>
+                            <td>Performance</td>
+                            <td>Medium</td>
+                            <td>Search results render time >2s on slow 3G</td>
+                            <td>
+                                1) Throttle to Slow 3G 2) Search common keyword
+                            </td>
+                            <td>Contentful paint <2s; skeletons shown</td>
+                            <td>~3-4s; no skeletons</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>BR-015</td>
+                            <td>Security</td>
+                            <td>High</td>
+                            <td>
+                                API key exposed in client bundle (dev build)
+                            </td>
+                            <td>1) Inspect build artifacts</td>
+                            <td>Key hidden/proxied</td>
+                            <td>Key visible in JS</td>
+                            <td>Open</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                © 2025 David Bosikov • This portfolio accompanies the Movie
+                Finder project.
+            </div>
+        </footer>
+
+        <script>
+            function filterTable(tableId, inputs) {
+                const table = document.getElementById(tableId);
+                const rows = Array.from(table.querySelectorAll("tbody tr"));
+                rows.forEach((row) => {
+                    const text = row.innerText.toLowerCase();
+                    let ok = true;
+                    for (const getVal of inputs) {
+                        const val = getVal().toLowerCase();
+                        if (val && !text.includes(val)) {
+                            ok = false;
+                            break;
+                        }
+                    }
+                    row.style.display = ok ? "" : "none";
+                });
+            }
+
+            const tcSearch = document.getElementById("tcSearch");
+            const tcModule = document.getElementById("tcModule");
+            const tcPriority = document.getElementById("tcPriority");
+            [tcSearch, tcModule, tcPriority].forEach((el) =>
+                el.addEventListener("input", () =>
+                    filterTable("tcTable", [
+                        () => tcSearch.value,
+                        () => tcModule.value,
+                        () => tcPriority.value,
+                    ])
+                )
+            );
+
+            const brSearch = document.getElementById("brSearch");
+            const brModule = document.getElementById("brModule");
+            const brSeverity = document.getElementById("brSeverity");
+            const brStatus = document.getElementById("brStatus");
+            [brSearch, brModule, brSeverity, brStatus].forEach((el) =>
+                el.addEventListener("input", () =>
+                    filterTable("brTable", [
+                        () => brSearch.value,
+                        () => brModule.value,
+                        () => brSeverity.value,
+                        () => brStatus.value,
+                    ])
+                )
+            );
+        </script>
+    </body>
+</html>
